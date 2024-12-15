@@ -464,6 +464,10 @@ body{
 
 
 @media (max-width: 800px) {
+    .bottom-header-text{
+        font-size: 1.5;
+    }
+
     .top{
         grid-template-columns: 1fr; margin-top: 9%;
     }
@@ -509,9 +513,6 @@ body{
         margin-bottom: 6%;
     }
 
-    .header-text, .header-text2{
-        font-size: 2.2vw;
-    }
 
     .latest-image{
         width: 18%;
