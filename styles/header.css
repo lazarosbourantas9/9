@@ -114,7 +114,7 @@ body{
     color: var(--white);
     display: inline-block; 
     width: 100%;
-    font-size: 0.9vw;
+    font-size: 0.75vw;
 }
 
 .header{
@@ -321,6 +321,13 @@ body{
     color: var(--main-color);
 }
 
+.promo-text{
+    text-align: center;
+    font-size: 0.75vw;
+    color: var(--main-color);
+    margin: auto;
+}
+
 .main-contact{
     display: flex;
     flex-direction: column;
@@ -509,12 +516,18 @@ body{
         margin-bottom: 6%;
     }
 
+    .promo-text{
+        text-align: center;
+        font-size: 1.2vw; 
+        margin: auto;
+    }
+
     .header-text, .header-text2{
         font-size: 1.9vw;
     }
 
     .bottom-header-text{
-        font-size: 1.5;
+        font-size: 1.5vw;
     }
 
     .latest-image{
