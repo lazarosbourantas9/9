@@ -317,7 +317,7 @@ li{
 
 .promo-text{
     text-align: center;
-    font-size: 0.75vw;
+    font-size: 0.9vw;
     color: var(--main-color);
     margin: auto;
 }
@@ -525,7 +525,7 @@ li{
 
     .promo-text{
         text-align: center;
-        font-size: 1.8vw; 
+        font-size: 2.1vw; 
         margin: auto;
     }
 
@@ -539,7 +539,7 @@ li{
     }
 
     .bottom-header-text{
-        font-size: 1.5vw;
+        font-size: 1.8vw;
     }
 
     .latest-image{
