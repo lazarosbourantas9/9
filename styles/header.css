@@ -1,13 +1,8 @@
 :root {
     --white:rgb(255, 255, 255);
     --black:rgb(0, 0, 0);
-    --main-color:rgb(182, 182, 182);
-    --secondary-color: rgb(45, 45, 45);
-
-    --white-05:rgb(240, 240, 240,0.9);
-    --black-05:rgb(5, 5, 5,0.9);
-    --main-color-05:rgb(132, 132, 132,0.9);
-    --secondary-color-05: rgb(23, 23, 23,0.9);
+    --main-color:rgb(192, 192, 192);
+    --secondary-color: rgb(42, 42, 42);
 }
 
 @font-face {
@@ -299,6 +294,7 @@ body{
 }
 
 .main-text{
+    font-family: system-ui;
     text-align: start;
     margin-left: 3%;
     margin-right: 3%;
@@ -307,21 +303,23 @@ body{
     color: var(--main-color);
 }
 
+li{
+    font-family: system-ui;
+    text-align: center;
+    font-size: 0.9vw;
+    color: var(--main-color);
+    margin: auto;
+    text-align: start;
+    margin-left: 3%;
+    margin-bottom: 9px;
+}
+
+
 .promo-text{
     text-align: center;
     font-size: 0.75vw;
     color: var(--main-color);
     margin: auto;
-}
-
-li{
-    text-align: center;
-    font-size: 0.75vw;
-    color: var(--main-color);
-    margin: auto;
-    text-align: start;
-    margin-left: 3%;
-    margin-bottom: 12px;
 }
 
 .main-contact{
@@ -521,7 +519,7 @@ li{
     }
     
     .main-text{
-        font-size: 1.95vw;
+        font-size: 2.1vw;
         margin-bottom: 6%;
     }
 
@@ -532,7 +530,8 @@ li{
     }
 
     li{
-        font-size: 1.8vw;
+        font-size: 2.1vw;
+        margin-bottom: 12px;
     }
 
     .header-text, .header-text2{
@@ -544,7 +543,7 @@ li{
     }
 
     .latest-image{
-        width: 21%;
+        width: 24%;
         margin-left: 0%;
         height: 100%;
         margin-bottom: 0px;
