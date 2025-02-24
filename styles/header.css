@@ -282,9 +282,9 @@ body{
 
 .home{
     margin: auto;
-    margin-top: 800px;
+    padding-top: 800px;
     width: 90%;
-    z-index: 1;
+    z-index: 0;
 } 
 
 .hm{
@@ -602,6 +602,6 @@ li{
     }
 
     .home{
-        margin-top: 180px;
+        padding-top: 300px;
     }
 }
