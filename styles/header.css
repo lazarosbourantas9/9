@@ -1,8 +1,9 @@
 :root {
     --white:rgb(255, 255, 255);
     --black:rgb(0, 0, 0);
+    --black2:rgb(10, 10, 10);
     --main-color:rgb(192, 192, 192);
-    --secondary-color: rgb(42, 42, 42);
+    --secondary-color: rgb(62, 62, 62);
 }
 
 @font-face {
@@ -276,13 +277,13 @@ body{
     object-fit: cover;
     z-index: -1;
     filter: blur(0.7rem);
-    transform: translateZ(-10px) scale(6);
+    transform: translateZ(-10px) scale(4.5);
 }
 
 
 .home{
     margin: auto;
-    padding-top: 800px;
+    padding-top: 700px;
     width: 90%;
     z-index: 0;
 } 
@@ -360,7 +361,7 @@ li{
 }
 
 .news-div2{
-    background-image: linear-gradient(to bottom right, var(--black), var(--secondary-color));
+    background-image: linear-gradient(to bottom right, var(--black2), var(--secondary-color));
     border: 3px solid var(--main-color);
     outline: 1px solid var(--main-color);
     box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.08);
@@ -433,7 +434,7 @@ li{
     gap: 18%; /* Space between items */
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom right, var(--black), var(--secondary-color));
+    background-image: linear-gradient(to bottom right, var(--black2), var(--secondary-color));
     border: 3px solid var(--main-color);
     outline: 1px solid var(--main-color);
     box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.08);
@@ -444,7 +445,8 @@ li{
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
-    width: 45%;
+    margin-left: 9px;
+    margin-right: 9px;
     cursor: pointer;
 }
 
@@ -598,10 +600,10 @@ li{
     }
 
     .back-background, .front-background{
-        transform: translateZ(-10px) scale(2.4);
+        transform: translateZ(-10px) scale(1.8);
     }
 
     .home{
-        padding-top: 330px;
+        padding-top: 240px;
     }
 }
