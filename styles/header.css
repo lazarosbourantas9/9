@@ -2,8 +2,8 @@
     --white:rgb(255, 255, 255);
     --black:rgb(0, 0, 0);
     --black2:rgb(10, 10, 10);
-    --main-color:rgb(192, 192, 192);
-    --secondary-color: rgb(62, 62, 62);
+    --main-color:rgb(202, 202, 202);
+    --secondary-color: rgb(72, 72, 72);
 }
 
 @font-face {
@@ -277,13 +277,13 @@ body{
     object-fit: cover;
     z-index: -1;
     filter: blur(0.7rem);
-    transform: translateZ(-10px) scale(4.5);
+    transform: translateZ(-10px) scale(7);
 }
 
 
 .home{
     margin: auto;
-    padding-top: 700px;
+    padding-top: 1500px;
     width: 90%;
     z-index: 0;
 } 
@@ -471,8 +471,8 @@ li{
 }
 
 .hidden{
-    opacity: 0.1;
-    filter: blur(0.1rem);
+    opacity: 0.3;
+    filter: blur(0.05rem);
 }
 
 .show{
@@ -482,9 +482,9 @@ li{
 }
 
 .hidden2{
-    opacity: 0;
-    filter: blur(0.15rem);
-    transform: translateX(+3%);
+    opacity: 0.2;
+    filter: blur(0.05rem);
+    transform: translateX(+1%);
 }
 
 .show2{
@@ -605,5 +605,36 @@ li{
 
     .home{
         padding-top: 240px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .back-background, .front-background{
+        transform: translateZ(-10px) scale(2);
+    }
+
+    .home{
+        padding-top: 400px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .back-background, .front-background{
+        transform: translateZ(-10px) scale(2.2);
+    }
+
+    .home{
+        padding-top: 450px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .back-background, .front-background{
+        transform: translateZ(-10px) scale(2.4);
+    }
+
+    .home{
+        padding-top: 500px;
     }
 }
