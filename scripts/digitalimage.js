@@ -40,3 +40,6 @@ function copyToClipboard(event, email) {
     // Optionally show a message
     alert('Email copied to clipboard: ' + email);
 }
+
+
+
