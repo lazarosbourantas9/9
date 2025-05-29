@@ -24,6 +24,11 @@
                 <img src="icons/youtubelogo.svg" alt="YouTube" class="nav-icon">
             </a>
         </div>
+        <div class="social-icons" style="margin-right: 0px;">
+            <a href="#" id="shareButton" title="Share">
+                <img src="icons/share-icon.png" alt="Share" class="nav-icon" style="background-color: white; border-radius: 15px; padding: 3px;">
+            </a>
+        </div>
     </nav>
     <img loading="lazy" class="noSelect" style="pointer-events: none; width: 100%; height: calc(100vh - 141px); object-fit: cover; margin-bottom: 0;" src="icons/9giifo.gif" alt="">
     <div style="width: 100%; height: 1px; margin-top: 0; margin-bottom: 6px; background-color: white; opacity: 0.3;"></div>
@@ -132,6 +137,24 @@
             }
         });
     </script>
+
+<script>
+    document.getElementById("shareButton").addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent the anchor from doing anything
+
+        if (navigator.share) {
+            navigator.share({
+                title: 'Lazaros Bourantas',
+                text: 'Check out lazarosbourantas.com',
+                url: window.location.href,
+            })
+            .then(() => console.log('Successfully shared'))
+            .catch((error) => console.error('Error sharing:', error));
+        } else {
+            alert("Sharing is not supported in this browser. Please copy the link manually.");
+        }
+    });
+</script>
     
     <script src="scripts/digitalimage.js"></script> 
 </body>
