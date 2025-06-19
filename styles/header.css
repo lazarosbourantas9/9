@@ -277,6 +277,7 @@ body{
     font-size: 2.1vw;
     color: var(--black);
     -webkit-text-stroke: 0.5px white;
+    -webkit-text-fill-color: black; /* Will override color (regardless of order) */
     font-weight: bolder;
     letter-spacing: 2.4px;
     transform: scaleY(1.3);
