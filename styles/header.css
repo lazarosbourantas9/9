@@ -402,7 +402,7 @@ li{
     gap: 18%; /* Space between items */
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom right, var(--black2), var(--secondary-color));
+    background-image: linear-gradient(to bottom right, black, white);
     border: 3px solid var(--main-color);
     outline: 1px solid var(--main-color);
     box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.08);
@@ -471,7 +471,7 @@ li{
 .social-navbar {
     margin-top: 95px;
     height: 36px;
-    background-image: linear-gradient(to bottom right, var(--black2), var(--secondary-color));
+    background-image: linear-gradient(to bottom right, black, white);
     z-index: 9;
     padding: 0px 0;
     text-align: right;
