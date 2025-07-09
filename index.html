@@ -158,7 +158,15 @@
         </div>           
     </div>           
     <div class="bottom-header">  
-        <div style="width: 100%; height: 1px; margin-top: 6px; background-color: white;"></div>    
+        <div style="width: 100%; height: 1px; margin-top: 6px; background-color: white;"></div>  
+        <div id="cookie-banner" class="fixed bottom-0 inset-x-0 bg-gray-900 text-white p-4 flex flex-col sm:flex-row items-center justify-between shadow-lg" hidden>
+            <span class="main-text" style="display: block; text-align: center; margin-bottom: 18px; margin-top: 9px;">
+              Cookies are used to remember your preferences and to improve this site.
+            </span>
+            <button style="width: 30%; display: block; margin: auto; margin-bottom: 15px;" class="" id="accept-cookies">
+                ACCEPT
+            </button>
+        </div>  
         <p class="promo-text">Cookies | Policy</p>     
         <p class="bottom-header-text">© 2024 LAZAROS BOURANTAS, All Rights Reserved.</p>
     </div>
@@ -192,7 +200,41 @@
                 alert("Sharing is not supported in this browser. Please copy the link manually.");
             }
         });
-    </script>    
+    </script>   
+    <script>
+        /* ---------- Low‑level helpers ---------- */
+        function setCookie(name, value, days = 365) {
+          const expires = new Date(Date.now() + days*864e5).toUTCString();
+          document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}; expires=${expires}; path=/; SameSite=Lax; Secure`;
+        }
+        
+        function getCookie(name) {
+          const pattern = `(?:^|; )${encodeURIComponent(name)}=([^;]*)`;
+          const match = document.cookie.match(new RegExp(pattern));
+          return match ? decodeURIComponent(match[1]) : null;
+        }
+        
+        function deleteCookie(name) { setCookie(name, '', -1); }
+        
+        /* ---------- Banner logic ---------- */
+        function showBanner() {
+          document.getElementById('cookie-banner').hidden = false;
+        }
+        
+        function hideBanner() {
+          document.getElementById('cookie-banner').hidden = true;
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+          if (!getCookie('cookieConsent')) showBanner();
+        
+          document.getElementById('accept-cookies')?.addEventListener('click', () => {
+            setCookie('cookieConsent', 'yes');
+            hideBanner();
+          });
+        });
+    </script>
+         
     <script src="scripts/digitalimage.js"></script> 
 </body>
 </html>

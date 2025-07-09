@@ -141,7 +141,7 @@ body{
     justify-content: space-between;
 
     /* ↓ make the background partially transparent so the blur shows through */
-    background: rgba(var(--black-rgb, 0,0,0), 0.95);
+    background: rgba(var(--black-rgb, 0,0,0), 0.93);
 
     /* ↓ the actual blur */
     backdrop-filter: blur(12px);
@@ -166,7 +166,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     min-width: 100%;
-    height: 90px;
+    height: 180px;
     justify-content: space-between;
     background-color: var(--black);
     backdrop-filter: blur(3px);
@@ -539,7 +539,7 @@ li{
 .cv-button {
     width: 100%;
     padding: 6px;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
     background-color: var(--main-color2);
     color: white;
     cursor: pointer;
@@ -682,7 +682,7 @@ li{
     }
 
     .latest-image{
-        width: 33%;
+        width: 34.5%;
         margin-left: 0%;
         margin-bottom: 0px;
         margin-top: 0px;
@@ -710,5 +710,10 @@ li{
 
     .collage2 {
         height: 78vh;
+    }
+
+    .cv-button {
+        padding: 9px;
+        font-size: 3vw;
     }
 }

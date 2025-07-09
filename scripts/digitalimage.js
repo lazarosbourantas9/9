@@ -43,3 +43,17 @@ function copyToClipboard(event, email) {
 
 
 
+// Example: remember a dark‑mode preference
+function applyTheme() {
+    const theme = getCookie('theme') || 'light';
+    document.documentElement.dataset.theme = theme;
+  }
+  
+  function toggleTheme() {
+    const newTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    setCookie('theme', newTheme, 365);
+    applyTheme();
+  }
+  
+  document.addEventListener('DOMContentLoaded', applyTheme);
+  
