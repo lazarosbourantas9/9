@@ -6,7 +6,7 @@
     --black3:rgb(13, 13, 13);
     --main-color:rgb(228, 228, 228);
     --main-color2:rgb(118, 118, 118);
-    --secondary-color: rgb(30, 30, 30);
+    --secondary-color: rgb(39, 39, 39);
 }
 
 ::-webkit-scrollbar{
@@ -562,8 +562,8 @@ li{
 
   .collage2-main-img{
     display: block;
-    width: 270px;
-    height: 270px;
+    width: 255px;
+    height: 255px;
     border-radius: 100%;
     object-fit: cover;       /* fill slice entirely */
     object-position: center;
@@ -571,7 +571,7 @@ li{
     position: relative;
     z-index: 1;
     margin: auto;
-    margin-top: 66px;
+    margin-top: 63px;
     border: 2px solid var(--secondary-color);
   }
 
