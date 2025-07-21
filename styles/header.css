@@ -5,8 +5,8 @@
     --black2:rgb(9, 9, 9);
     --black3:rgb(13, 13, 13);
     --main-color:rgb(228, 228, 228);
-    --main-color2:rgb(118, 118, 118);
-    --secondary-color: rgb(39, 39, 39);
+    --main-color2:rgb(128, 128, 128);
+    --secondary-color: rgb(59, 59, 59);
 }
 
 ::-webkit-scrollbar{
