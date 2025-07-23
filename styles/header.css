@@ -5,8 +5,8 @@
     --black2:rgb(9, 9, 9);
     --black3:rgb(13, 13, 13);
     --main-color:rgb(228, 228, 228);
-    --main-color2:rgb(128, 128, 128);
-    --secondary-color: rgb(59, 59, 59);
+    --main-color2:rgb(139, 139, 139);
+    --secondary-color: rgb(63, 63, 63);
 }
 
 ::-webkit-scrollbar{
@@ -479,7 +479,7 @@ li{
 }
 
 .hidden{
-    opacity: 0.3;
+    opacity: 0.15;
     filter: blur(0.05rem);
 }
 
