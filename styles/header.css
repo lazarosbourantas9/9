@@ -510,7 +510,7 @@ li{
 .social-navbar {
     margin-top: 65px;
     height: 36px;
-    background-image: linear-gradient(to bottom right, var(--secondary-color), var(--main-color));
+    background-image: linear-gradient(to bottom right, var(--secondary-color), var(--main-color2));
     z-index: 9;
     padding: 0px 0;
     text-align: right;
