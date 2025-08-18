@@ -375,6 +375,7 @@ li{
     align-items: center;
     height: auto;
     transition: all 200ms;
+    border-radius: 6px;
 }
 
 .news-div2:hover{
@@ -431,6 +432,7 @@ li{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 6px;
 }
 
 .icon-container {
@@ -446,6 +448,7 @@ li{
     outline: 1px solid var(--main-color);
     box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.08);
     outline-offset: -9px;
+    border-radius: 30px;
 }
 
 .icon-div{
