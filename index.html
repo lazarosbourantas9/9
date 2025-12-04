@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lazarosbourantas | MAIN PAGE</title>
+    <title>Lazaros Bourantas | MAIN PAGE</title>
     <link href="/Fonts/OldEnglishFive-axyVg.woff2" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="icons/lm.webp">
     <link rel="stylesheet" href="styles/styles.css">  
@@ -37,7 +37,7 @@
             <p class="title-text fade-in-slide-up" style="position: relative; font-size: 45px; font-weight: bold; color: darkgray; z-index: 2; width: 100%; margin-right: 0px; margin-left: 0px; margin-bottom: 15px;">ΛΑΖΑΡΟΣ ΜΠΟΥΡΑΝΤΑΣ</p>
             <p class="subtitle-text hidden" style="position: relative; color: white; z-index: 3; width: 100%; text-align: center; margin-top: 0px; margin-left: 0px;">
                 <a href="#latest" class="nav-scroll noSelect">LATEST |</a>
-                <a href="#services" class="nav-scroll noSelect"> EXPERTISE |</a>
+                <a href="#services" class="nav-scroll noSelect"> BIO |</a>
                 <a href="#cv" class="nav-scroll noSelect"> CV |</a>
                 <a href="#contact" class="nav-scroll noSelect"> CONTACT</a>
             </p>
@@ -45,13 +45,26 @@
     </div>
     <div style="width: 100%; height: 1px; margin-top: 0; margin-bottom: 6px; background-color: white; opacity: 0.3;"></div>
     <div class="home hidden" id="home"> 
+        <div style="display: none;" class="carousel">
+            <div class="carousel-track">
+                <img src="icons/carousel/7.jpg">
+                <img src="icons/carousel/2.jpeg">
+                <img src="icons/carousel/8.jpg">
+                <img src="icons/carousel/5.jpg">
+                <img src="icons/carousel/3.jpg">
+                <img src="icons/carousel/4.jpg">
+                <img src="icons/carousel/6.jpg">
+                <img src="icons/carousel/2.jpeg">
+                <img src="icons/carousel/1.jpg">
+            </div>
+        </div>
         <p class="title-text" id="latest" >
             LATEST
         </p>
-        <div style="margin-bottom: 12px; border: 1.5px solid rgb(192, 192, 192); outline: none;" class="news-div2"></div>
+        <div style="margin-bottom: 12px; border: 1.5px solid rgb(192, 192, 192); outline: none;" class="news-div"></div>
         <a href="https://lazarosbourantas9.github.io/Finora/" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/Finora.webp" alt="">
-            <div style="width: 55%;">
+            <div>
                 <p class="subtitle-text">"FINORA" FINANCES WEB APPLICATION</p>
                 <p class="main-text">Take control of your finances with clarity.</p>
             </div>
@@ -59,7 +72,7 @@
         </a>
         <a href="https://draquoinc.company.site/" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/draquo/0.jpg" alt="">
-            <div style="width: 55%;">
+            <div>
                 <p class="subtitle-text">"DRAQUOINC" E-SHOP</p>
                 <p class="main-text">Lightweight e-commerce site designed and deployed using Ecwid. Focused on simplicity and mobile usability.</p>
             </div>
@@ -67,25 +80,26 @@
         </a>
         <a href="MorePages/oikoworthliving.html" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/oikoworthliving/oikoworthliving (5).jpg" alt="">
-            <div style="width: 55%;">
+            <div>
                 <p class="subtitle-text">PRESENTATION OF "Oiko Worth Living" WEBSITE</p>
                 <p class="main-text">Minimal website providing information about the "Oiko Worth Living" apartment in Ioannina, Greece.</p>
             </div>
            </a>
         <a href="MorePages/karystosecret.html" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/karystosecret/1.jpg" alt="">
-            <div style="width: 55%;">
+            <div>
                 <p class="subtitle-text">PRESENTATION OF "KARYSTOSECRET.GR" WEBSITE</p>
                 <p class="main-text">Showcasing the beauty of Karystos, Evia, with easy navigation and nature-inspired design.</p>
             </div>
         </a> 
-        <div style="margin-top: 12px; border: 1.5px solid rgb(192, 192, 192); outline: none;" class="news-div2"></div>
+        <div style="margin-top: 12px; border: 1.5px solid rgb(192, 192, 192); outline: none;" class="news-div"></div>
         <p class="title-text" id="services">
-            EXPERTISE
+            BIO
         </p>
-        <div style="margin-bottom: 12px; border: 1.5px solid rgb(192, 192, 192); outline: none;" class="news-div2"></div>
-        <p style="margin-top: 30px; margin-bottom: 30px;" class="subtitle-text">A multidisciplinary engineer creating custom, scalable, and innovation-driven solutions with a focus on performance, automation, and user experience.</p>
-        <div style="margin-bottom: 12px; border: 1.5px solid rgb(192, 192, 192); outline: none;" class="news-div2"></div>
+        <div style="margin-bottom: 12px; border: 1.5px solid rgb(192, 192, 192); outline: none;" class="news-div"></div>
+        <p style="margin-top: 18px; margin-bottom: 15px; text-align: center;" class="subtitle-text">Born and raised in Evia, Greece. Athlete. Studing Computer Science and Engineering at the Univercity of Ioannina.</p>
+        <div style="margin-bottom: 12px; border: 1.5px solid rgb(192, 192, 192); outline: none;" class="news-div"></div>
+        <p class="subtitle-text" style="text-align: center;">EXPERTISE:</p>
         <div class="expertise-div noSelect hidden2">
             <div style="width: 90%; margin-left: 6px;">
                 <p style="color: white;" class="subtitle-text">WEBSITE DESIGN & DEVELOPMENT</p>
@@ -117,16 +131,11 @@
                 </p>
             </div>
         </div>
-        <div class="expertise-div noSelect hidden2">
+        <div class="expertise-div noSelect hidden2 repair-bg">
             <div style="width: 100%; margin-left: 6px; margin-right: 6px;">
                 <p style="color: white; margin-top: 15px;" class="subtitle-text">DEVICE REPAIR, DIAGNOSTICS & UPGRADES</p>
                 <p style="margin-bottom: 15px;" class="main-text">Repairs and upgrades for PCs, laptops, and smartphones — including custom builds and component-level service.</p>
-                <div style="margin: auto; display: flex; height: 105px; width: 100%; justify-content: space-evenly; align-items: center;">
-                    <div class="photo2" ><img loading="lazy" src="icons/electronicdevicerepairs/repairs (8).jpg" alt=""></div>
-                    <div class="photo2" ><img loading="lazy" src="icons/electronicdevicerepairs/repairs (3).JPG" alt=""></div>
-                    <div class="photo2" ><img loading="lazy" src="icons/electronicdevicerepairs/repairs (5).jpg" alt=""></div>
-                    <div class="photo2" ><img loading="lazy" src="icons/electronicdevicerepairs/repairs (1).jpg" alt=""></div>
-                </div>
+                <div class="photo2" ></div>
                 <ul>
                     <li>Battery replacements</li>
                     <li>Cracked screen replacements</li>
@@ -137,28 +146,26 @@
                 </ul>  
             </div>
         </div>
-        <div style="margin-top: 12px; border: 1.5px solid rgb(192, 192, 192); outline: none;" class="news-div2"></div> 
-        <div id="cv" style="border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; margin-bottom: 0px; margin-top: 15%; height: auto; padding-top: 45px; padding-bottom: 45px;" href="MorePages/karystosecret.html" class="icon-container noSelect">
-            <div style="width: 90%;">
+        <div style="margin-top: 12px; border: 1.5px solid rgb(192, 192, 192); outline: none;" class="news-div"></div> 
+        <div id="cv" style="border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; margin-bottom: 0px; margin-top: 15%; height: auto; padding-top: 60px; padding-bottom: 60px;" href="MorePages/karystosecret.html" class="icon-container noSelect">
+            <div style="width: 90%; text-align: center;">
                 <p class="title-text" style="text-align: center; margin-bottom: 15px; margin-top: 0px;">CURRICULUM VITAE</p> 
-                <p class="subtitle-text hidden" style="text-align: center; margin-bottom:30px; margin-top: 0px;">REVISED: 2/2025</p> 
-                <div style="width: 30%; margin: auto;">
-                    <button id="toggleCV"  class="cv-button" >
+                <p class="subtitle-text hidden" style="text-align: center; margin-top: 0px;">REVISED: 2/2025</p> 
+                <button id="toggleCV" class="cv-button" >
                         VIEW C.V.
-                    </button>
-                </div>
+                </button>
                 <div id="cvSection" style="display: none;">
                     <p style="color: white; margin-top: 30px; margin-bottom: 15px;" class="subtitle-text">PERSONAL DETAILS</p>
                     <p style="text-align: start; margin-bottom: 6px;" class="main-text">Name: Lazaros Bourantas</p>
                     <p style="color: white; margin-top: 30px;" class="subtitle-text">EDUCATION</p>
-                    <ul><li>Computer Science and Engineering, University of Ioannina, Greece, (2021 - Present)</li> <li>Corporate Identity and Personal Branding: Strategies and Techniques for Enhancing Influence in the Professional Space, National and Kapodistrian University of Athens E-Learning Sertificate</li></ul>
+                    <ul><li>Computer Science and Engineering, University of Ioannina, Greece, (2021 - Present)</li> <li>Corporate Identity and Personal Branding: Strategies and Techniques for Enhancing Influence in the Professional Space, National and Kapodistrian University of Athens E-Learning Sertificate</li> <li>Google Courses for AI</li></ul>
                     <p style="color: white; margin-top: 24px;" class="subtitle-text">LANGUAGES</p>
                     <ul><li>Greek (native)</li>
                     <li>English (fluent)</li></ul>
                 </div>
             </div>
         </div>
-        <div class="icon-container" id="contact" style="border-top-right-radius: 0px; border-top-left-radius:0px;">
+        <div class="icon-container" id="contact" style="border-top-right-radius: 0px; border-top-left-radius:0px; margin-top: 0px;">
             <div class="icon-div" title="lazarosbourantas9@gmail.com" onclick="copyToClipboard(event, 'lazarosbourantas9@gmail.com')">
                 <p class="subtitle-text" style="margin: 0px; text-align: center; padding: 0px;">For business inquiries, contact:</p>
                 <p class="promo-text hidden" style="margin-top: 1.2vw;">lazarosbourantas9@gmail.com</p>
@@ -174,7 +181,22 @@
                     <img loading="lazy" src="icons/youtubelogo.svg" alt="Youtube Icon">
                 </a>
             </div>
-        </div>           
+        </div> 
+        <div class="icon-container" style="height: auto; padding:60px">
+            <p class="title-text" style="text-align: center; margin-bottom: 15px; margin-top: 0px;">NEWSLETTER</p>
+            <p class="main-text" style="text-align: center;">
+                Stay updated with my latest projects, releases, and announcements.
+            </p>
+            <form action="subscribe.php" method="POST" 
+                style="display:flex; flex-direction:column; align-items:center; gap:10px; width:100%;">
+                <input type="email" name="email" required placeholder="Enter your email"
+                    style="width: 70%; max-width: 400px; padding: 12px; border-radius: 6px; border:none;">
+                <button type="submit" 
+                        class="cv-button">
+                    SUBSCRIBE
+                </button>
+            </form>
+        </div>
     </div>           
     <div class="bottom-header">  
         <a class="noSelect hidden" href="/index.html" style=" cursor: pointer; height: 21%; margin: auto; opacity: 0.3;"> <img style="height: 100%; object-fit: fill;" src="icons/lm.webp"></a>
