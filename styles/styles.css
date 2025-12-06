@@ -532,6 +532,7 @@ li {
 .carousel {
     width: 100%;      /* adjust if needed */
     height: 510px;
+    max-width: 600px;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 6px;
