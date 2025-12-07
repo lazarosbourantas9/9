@@ -539,57 +539,42 @@ li {
     position: relative;
 }
 
-/* --- IMAGE WRAPPER --- */
 .carousel-track {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    animation: slide 60s infinite ease-in-out;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-/* --- IMAGES --- */
 .carousel-track img {
-    width: 100%;
-    height: 100%;          /* fills height */
-    flex-shrink: 0;
-    object-fit: cover;     /* ensures proper fill */
-    border-radius: 3px;
+  position: absolute;
+  inset: 0;                 /* full size */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+
+  opacity: 0;
+  animation: fade 60s infinite; /* 9 images → 4s each */
 }
 
-@keyframes slide {
-    0%   { transform: translateX(0%); }
-    4%   { transform: translateX(0%); }
+.carousel-track img:nth-child(1) { animation-delay: 0s; }
+.carousel-track img:nth-child(2) { animation-delay: 6.66s; }
+.carousel-track img:nth-child(3) { animation-delay: 13.32s; }
+.carousel-track img:nth-child(4) { animation-delay: 19.98s; }
+.carousel-track img:nth-child(5) { animation-delay: 26.64s; }
+.carousel-track img:nth-child(6) { animation-delay: 33.30s; }
+.carousel-track img:nth-child(7) { animation-delay: 39.96s; }
+.carousel-track img:nth-child(8) { animation-delay: 46.62s; }
+.carousel-track img:nth-child(9) { animation-delay: 53.28s; }
 
-    5%   { transform: translateX(-100%); }
-    9%   { transform: translateX(-100%); }
-
-    10%  { transform: translateX(-200%); }
-    14%  { transform: translateX(-200%); }
-
-    15%  { transform: translateX(-300%); }
-    19%  { transform: translateX(-300%); }
-
-    20%  { transform: translateX(-400%); }
-    24%  { transform: translateX(-400%); }
-
-    25%  { transform: translateX(-500%); }
-    29%  { transform: translateX(-500%); }
-
-    30%  { transform: translateX(-600%); }
-    34%  { transform: translateX(-600%); }
-
-    35%  { transform: translateX(-700%); }
-    39%  { transform: translateX(-700%); }
-
-    40%  { transform: translateX(-800%); }
-    44%  { transform: translateX(-800%); }
-
-    /* even faster return */
-    50%  { transform: translateX(0%); }
-
-    100% { transform: translateX(0%); }
+/* Fade timing stays the same */
+@keyframes fade {
+  0%   { opacity: 0; }
+  5%   { opacity: 1; }   /* fade in */
+  25%  { opacity: 1; }   /* fully visible */
+  30%  { opacity: 0; }   /* fade out */
+  100% { opacity: 0; }
 }
-
 
 @keyframes fadeInUp {
     to {
