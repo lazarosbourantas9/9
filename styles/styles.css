@@ -89,7 +89,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7); /* adjust opacity as needed */
+    background: rgba(0, 0, 0, 0.75); /* adjust opacity as needed */
     backdrop-filter: blur(21px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 3px solid var(--white);
@@ -113,7 +113,7 @@ body {
 
 .home {
     margin: auto;
-    width: 91%;
+    width: 85%;
     z-index: 0;
     padding-bottom: 30px;
 }
@@ -192,19 +192,72 @@ li {
     filter: brightness(0.9);
 }
 
+/* ================= EXPERTISE CARD ================= */
 .expertise-div {
     background-image: linear-gradient(to bottom right, var(--black4), var(--secondary-color));
     border: 1px solid var(--black);
     box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.08);
-    outline-offset: -9px;
-    display: flex;
-    align-items: center;
-    height: auto;
     border-radius: 6px;
-    padding: 9px;
+    padding: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;   
     margin-top: 6px;
     margin-bottom: 6px;
+
+    display: flex;
+    flex-direction: column; /* 👈 IMPORTANT */
 }
+
+/* ================= HEADER ================= */
+.expertise-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;     /* title then arrow */
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.expertise-header .subtitle-text {
+    margin: auto;
+    text-align: center;
+    color: var(--main-color2);
+}
+
+/* ================= ARROW ================= */
+.expertise-header .arrow {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9vw;
+    color: var(--main-color);
+    transition: transform 0.3s ease;
+}
+
+/* ================= CONTENT ================= */
+.expertise-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.45s ease, opacity 0.3s ease;
+}
+
+/* ================= EXPANDED STATE ================= */
+.expertise-div.active .expertise-content {
+    max-height: 1200px; /* safe height */
+    opacity: 1;
+}
+
+.expertise-div.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 800px) {
+    .expertise-header .arrow {
+        font-size: 3vw;
+    }
+}
+
 
 .repair-bg {
     position: relative;
@@ -508,8 +561,8 @@ li {
 
 .collage2-main-img {
     display: block;
-    width: 210px;
-    height: 210px;
+    width: 180px;
+    height: 180px;
     border-radius: 100%;
     object-fit: cover;
     object-position: center;
@@ -557,14 +610,13 @@ li {
 }
 
 .carousel-track img:nth-child(1) { animation-delay: 0s; }
-.carousel-track img:nth-child(2) { animation-delay: 6.66s; }
-.carousel-track img:nth-child(3) { animation-delay: 13.32s; }
-.carousel-track img:nth-child(4) { animation-delay: 19.98s; }
-.carousel-track img:nth-child(5) { animation-delay: 26.64s; }
-.carousel-track img:nth-child(6) { animation-delay: 33.30s; }
-.carousel-track img:nth-child(7) { animation-delay: 39.96s; }
-.carousel-track img:nth-child(8) { animation-delay: 46.62s; }
-.carousel-track img:nth-child(9) { animation-delay: 53.28s; }
+.carousel-track img:nth-child(2) { animation-delay: 7.5s; }
+.carousel-track img:nth-child(3) { animation-delay: 15s; }
+.carousel-track img:nth-child(4) { animation-delay: 22.5s; }
+.carousel-track img:nth-child(5) { animation-delay: 30s; }
+.carousel-track img:nth-child(6) { animation-delay: 37.5s; }
+.carousel-track img:nth-child(7) { animation-delay: 45s; }
+.carousel-track img:nth-child(8) { animation-delay: 52.5s; }
 
 @keyframes fade {
   0%   { opacity: 0; }
@@ -615,10 +667,12 @@ li {
         border: 1px solid var(--main-color);
     }
 
-    .news-div2 .subtitle-text,
+    .news-div2 .subtitle-text{
+        font-size: 4.8vw;
+    }
     .news-div2 .main-text {
-    font-size: 4.8vw;
-}
+        font-size: 4.2vw;
+    }
 
     .nav-scroll {
         font-size: 4.2vw;
