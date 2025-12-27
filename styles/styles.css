@@ -300,7 +300,7 @@ li {
     height: auto;
     transition: all 200ms;
     border-radius: 6px;
-    margin-top: 3px;
+    margin-top: 5px;
     margin-bottom: 3px;
 }
 
@@ -311,7 +311,7 @@ li {
   background-size: cover;
   background-position: center;
 
-  border: 3px solid var(--main-color);
+  border: 3px solid var(--secondary-color);
   box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.08);
   position: relative;
   border-radius: 6px;
@@ -323,7 +323,8 @@ li {
   justify-content: center;
   align-items: center;
 
-  margin-top: 3px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 
@@ -515,16 +516,16 @@ li {
 }
 
 .cv-button {
-    width: 180px;
-    padding: 12px;
-    font-size: 1.8vw;
+    width: 270px;
+    height: 60px;
+    font-size: 2vh;
     background-color: var(--main-color2);
     color: white;
     cursor: pointer;
     outline: rgb(255, 255, 255) solid 1.5px;
     transition: background-color 0.2s ease;
     margin: auto;
-    margin-top: 23px;
+    margin-top: 30px;
     margin-bottom: 6px;
     text-align: center;
 }
@@ -535,7 +536,7 @@ li {
 }
 
 .collage2 {
-    height: clamp(300px, 87vh, 700px);
+    height: clamp(330px, 90vh, 900px);
     width: 100%;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
@@ -562,8 +563,8 @@ li {
 
 .collage2-main-img {
     display: block;
-    width: 180px;
-    height: 180px;
+    width: 22vh;
+    height: 22vh;
     border-radius: 100%;
     object-fit: cover;
     object-position: center;
@@ -571,7 +572,7 @@ li {
     position: relative;
     z-index: 1;
     margin: auto;
-    margin-top: 90px;
+    margin-top: 22vh;
     border: 1px solid var(--black4);
     box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
 }
@@ -585,7 +586,7 @@ li {
 /* --- CAROUSEL CONTAINER --- */
 .carousel {
     width: 100%;      /* adjust if needed */
-    height: 510px;
+    height: 57vh;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 6px;
@@ -665,7 +666,7 @@ li {
     }
 
     .news-div2, .news-div2:hover{
-        border: 1px solid var(--main-color);
+        border: 1px solid var(--secondary-color2);
     }
 
     .news-div2 .subtitle-text{
@@ -719,11 +720,6 @@ li {
 
     .collage2 {
         height: calc(100vh - 195px);
-    }
-
-    .cv-button {
-        padding: 9px;
-        font-size: 3vw;
     }
 
     .collage2-main-img {
