@@ -74,7 +74,7 @@ div {
 body {
     margin: auto;
     margin-top: 90px;
-    background-image: linear-gradient(to bottom right, var(--black3), var(--black4));
+    background-image: linear-gradient(to bottom right, var(--black2), var(--black4));
     align-items: center;
     overflow-x: hidden;
 }
@@ -116,7 +116,7 @@ body {
     width: 85%;
     z-index: 0;
     padding-bottom: 30px;
-    padding-top: 15px;
+    padding-top: 0px;
 }
 
 .title-text {
@@ -133,8 +133,8 @@ body {
 
 .title-text2 {
     font-family: "Old";
-    margin: 45px;
-    margin-bottom: 21px;
+    margin: 4.2vh;
+    margin-bottom: 1.8vh;
     text-align: center;
     font-size: 2.7vw;
     color: var(--white);
@@ -310,7 +310,7 @@ li {
   background-position: center;
 
   border: 3px solid var(--secondary-color);
-  box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.08);
+  box-shadow: 2px 2px 9px rgba(255, 255, 255, 0.08);
   position: relative;
   border-radius: 6px;
   overflow: hidden;
@@ -405,7 +405,7 @@ li {
 }
 
 .icon-container {
-    margin-top: 60px;
+    margin-top: 45px;
     margin-bottom: 30px;
     height: 180px;
     display: flex;
@@ -512,8 +512,8 @@ li {
 }
 
 .cv-button {
-    width: 270px;
-    height: 60px;
+    width: 240px;
+    height: 45px;
     font-size: 2vh;
     background-color: var(--main-color2);
     color: white;
@@ -604,21 +604,19 @@ li {
   border-radius: 3px;
 
   opacity: 0;
-  animation: fade 20s infinite; /* Total duration: 20s */
+  animation: fade 15s infinite; 
 }
 
-/* 20s / 5 images = 4s delay intervals */
+/* 15s total / 3 images = 5s intervals */
 .carousel-track img:nth-child(1) { animation-delay: 0s; }
-.carousel-track img:nth-child(2) { animation-delay: 4s; }
-.carousel-track img:nth-child(3) { animation-delay: 8s; }
-.carousel-track img:nth-child(4) { animation-delay: 12s; }
-.carousel-track img:nth-child(5) { animation-delay: 16s; }
+.carousel-track img:nth-child(2) { animation-delay: 5s; }
+.carousel-track img:nth-child(3) { animation-delay: 10s; }
 
 @keyframes fade {
-  0%   { opacity: 0; }
-  2%   { opacity: 1; }   /* faster fade in */
-  22%  { opacity: 1; }   /* fully visible */
-  24%  { opacity: 0; }   /* faster fade out */
+  0% { opacity: 0; }
+  5% { opacity: 1; }         /* Fade in during the first 0.75s */
+  33.33% { opacity: 1; }     /* Stay fully visible until 5s */
+  38.33% { opacity: 0; }     /* Fade out over the next 0.75s */
   100% { opacity: 0; }
 }
 
