@@ -34,7 +34,7 @@
     <div class="collage2">
         <img class="collage2-main-img hidden" src="icons/images.webp" alt="" />
         <div style="position: absolute; top: 45vh; width: 100%;">
-            <p class="title-text fade-in-slide-up" style="position: relative; font-size: 3.9vh; font-weight: bold; color: darkgray; z-index: 2; width: auto; margin-right: 15px; margin-left: 15px; margin-bottom: 15px;">ΛΑΖΑΡΟΣ ΜΠΟΥΡΑΝΤΑΣ</p>
+            <p class="title-text fade-in-slide-up" style="position: relative; font-size: 3.9vh; font-weight: bold; color: darkgray; z-index: 2; width: auto; margin-right: 30px; margin-left: 30px; margin-bottom: 15px;">ΛΑΖΑΡΟΣ ΜΠΟΥΡΑΝΤΑΣ</p>
             <p class="subtitle-text hidden" style="position: relative; color: white; z-index: 3; width: 100%; text-align: center; margin-top: 0px; margin-left: 0px;">
                 <a href="#latest" class="nav-scroll noSelect">LATEST |</a>
                 <a href="#services" class="nav-scroll noSelect"> BIO |</a>
@@ -86,12 +86,24 @@
                 <p class="main-text">Showcasing the beauty of Karystos, Evia, with easy navigation and nature-inspired design.</p>
             </div>
         </a> 
+        <div class="ad-container" style="text-align: center; margin: 20px 0; overflow: hidden;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="fluid"
+                 data-ad-layout-key="-fb+5w+4e-db+86"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
         <p class="title-text2" id="services">
             BIO
         </p>
-        <div style="margin-bottom: 12px; border: 1.5px solid rgb(132, 132, 132); outline: none;" class="news-div"></div>
+        <div style="margin-bottom: 12px; border: 1.5px solid rgb(102, 102, 102); outline: none;" class="news-div"></div>
         <p style="margin-top: 12px; margin-bottom: 12px; text-align: center; color: lightgrey;" class="subtitle-text">Born and raised in Evia, Greece. Athlete. Studing Computer Science and Engineering at the Univercity of Ioannina.</p>
-        <div style="margin-bottom: 6px; border: 1.5px solid rgb(132, 132, 132); outline: none;" class="news-div"></div>
+        <div style="margin-bottom: 6px; border: 1.5px solid rgb(102, 102, 102); outline: none;" class="news-div"></div>
         <div class="carousel">
             <div class="carousel-track">
                 <img src="icons/carousel/4.png">
@@ -121,8 +133,6 @@
                 </ul>
             </div>
         </div>
-
-        <!-- ================= SOFTWARE SOLUTIONS ================= -->
         <div class="expertise-div noSelect hidden2">
             <div class="expertise-header">
                 <p class="subtitle-text">
@@ -146,8 +156,6 @@
                 </p>
             </div>
         </div>
-
-        <!-- ================= DEVICE REPAIR ================= -->
         <div class="expertise-div noSelect hidden2 repair-bg">
             <div class="expertise-header">
                 <p class="subtitle-text">DEVICE REPAIR, DIAGNOSTICS & UPGRADES</p>
@@ -169,7 +177,6 @@
                 </ul>
             </div>
         </div>
-
         <div id="cv" href="MorePages/karystosecret.html" class="icon-container noSelect" style="height: auto; padding-top: 60px; padding-bottom: 60px;">
             <div style="width: 90%; text-align: center;">
                 <p class="title-text" style="text-align: center; margin-bottom: 15px; margin-top: 0px;">CURRICULUM VITAE</p> 
@@ -233,17 +240,16 @@
     
             if (cvSection.style.display === "none" || cvSection.style.display === "") {
                 cvSection.style.display = "block";
-                button.textContent = "HIDE C.V."; // Change button text
+                button.textContent = "HIDE C.V.";
             } else {
                 cvSection.style.display = "none";
-                button.textContent = "VIEW C.V."; // Change button text back
+                button.textContent = "VIEW C.V.";
             }
         });
     </script>
     <script>
         document.getElementById("shareButton").addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent the anchor from doing anything
-
+            event.preventDefault();
             if (navigator.share) {
                 navigator.share({
                     title: 'Lazaros Bourantas',
