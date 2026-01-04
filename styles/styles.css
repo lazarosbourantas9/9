@@ -709,13 +709,13 @@ li {
     margin-bottom: 15px;
 }
 
-.hero-nav {
+.hero-nav-links {
     position: relative; 
     color: white; 
     z-index: 3; 
     width: 100%; 
     text-align: center; 
-    margin-top: 0px; 
+    margin-top: 1.5vh; 
     margin-left: 0px;
 }
 
@@ -933,13 +933,6 @@ ins.adsbygoogle {
     max-width: 800px;
 }
 
-.bio-hero-text {
-    text-align: center !important;
-    font-size: clamp(1rem, 2vh, 1.5rem) !important;
-    color: var(--main-color) !important;
-    margin-bottom: 30px !important;
-    line-height: 1.6;
-}
 
 .hero-name {
     font-size: clamp(1rem, 3.9vh, 8rem) !important;
