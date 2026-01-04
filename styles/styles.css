@@ -902,7 +902,7 @@ ins.adsbygoogle {
 /* Update the Hero Container */
 .collage2 {
     position: relative;
-    height: 81vh; /* Increased height for impact */
+    height: 78vh; /* Increased height for impact */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -933,9 +933,17 @@ ins.adsbygoogle {
     max-width: 800px;
 }
 
+.bio-hero-text {
+    text-align: center !important;
+    font-size: clamp(1rem, 2vh, 1.5rem) !important;
+    color: var(--main-color) !important;
+    margin-bottom: 30px !important;
+    line-height: 1.6;
+}
+
 .hero-name {
     font-size: clamp(1rem, 3.9vh, 8rem) !important;
-    margin: 36vh 0 0 0 !important;
+    margin: 33vh 0 0 0 !important;
 }
 
 
