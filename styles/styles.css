@@ -198,10 +198,10 @@ li {
     background-image: linear-gradient(to bottom right, var(--black4), var(--secondary-color));
     border: 1px solid var(--black);
     box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.08);
-    border-radius: 6px;
+    border-radius: 9px;
     padding: 15px;
-    padding-top: 30px;
-    padding-bottom: 30px;   
+    padding-top: 45px;
+    padding-bottom: 45px;   
     margin-top: 6px;
     margin-bottom: 6px;
 
@@ -274,7 +274,7 @@ li {
     background-position: center;
     background-repeat: no-repeat;
 
-    filter: blur(3px) brightness(0.5);       /* <-- the blur */
+    filter: blur(2px) brightness(0.5);       /* <-- the blur */
     transform: scale(1.1);   /* prevents edge clipping after blur */
 
     z-index: 0;
@@ -902,7 +902,7 @@ ins.adsbygoogle {
 /* Update the Hero Container */
 .collage2 {
     position: relative;
-    height: 78vh; /* Increased height for impact */
+    height: 76vh; /* Increased height for impact */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -920,7 +920,7 @@ ins.adsbygoogle {
 }
 
 .hero-carousel img {
-    filter: brightness(1) blur(1px); /* Darken images so text pops */
+    filter: brightness(0.8) blur(1px); /* Darken images so text pops */
     transition: opacity 1.5s ease-in-out;
     box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
 }
@@ -943,7 +943,7 @@ ins.adsbygoogle {
 
 .news-div2 {
   position: relative;
-  border-radius: 3px;
+  border-radius: 9px;
   overflow: hidden;
 }
 
