@@ -725,10 +725,10 @@ li {
     position: relative; 
     color: white; 
     z-index: 3; 
-    width: 100%; 
     text-align: center; 
     margin-top: 1.5vh; 
     margin-left: 0px;
+    letter-spacing: 1px;
 }
 
 /* Expertise Title spacing */
@@ -938,9 +938,9 @@ ins.adsbygoogle {
 }
 
 .hero-carousel img {
-    filter: brightness(0.8) blur(1px); /* Darken images so text pops */
+    filter: brightness(0.8) blur(2px); /* Darken images so text pops */
     transition: opacity 1.5s ease-in-out;
-    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
 }
 
 /* Content Overlay Styling */
@@ -953,8 +953,9 @@ ins.adsbygoogle {
 
 
 .hero-name {
-    font-size: clamp(1rem, 3.9vh, 8rem) !important;
+    font-size: clamp(1rem, 4.5vh, 8rem) !important;
     margin: 33vh 0 0 0 !important;
+    letter-spacing: 1px;
 }
 
 
