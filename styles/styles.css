@@ -842,7 +842,7 @@ ins.adsbygoogle {
 }
 
 .hero-carousel img {
-    filter: brightness(0.7) blur(3px); /* Darken images so text pops */
+    filter: brightness(0.7) blur(2.5px); /* Darken images so text pops */
     transition: opacity 1.5s ease-in-out;
     box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
 }
@@ -861,7 +861,6 @@ ins.adsbygoogle {
     margin: 33vh 0 0 0 !important;
     letter-spacing: 2.7px;
     color: var(--main-color2);
-    text-shadow: 1px 1px 9px var(--secondary-color);
     
 }
 
