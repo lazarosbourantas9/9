@@ -955,7 +955,7 @@ ins.adsbygoogle {
 .hero-name {
     font-size: clamp(1rem, 4.5vh, 8rem) !important;
     margin: 33vh 0 0 0 !important;
-    letter-spacing: 1px;
+    letter-spacing: 1.8px;
 }
 
 
