@@ -864,7 +864,9 @@ ins.adsbygoogle {
     }
 
     .nav-scroll {
-        font-size: 4.2vw;
+        font-size: 4.9vw;
+        letter-spacing: 0px;
+        font-weight: bold;
     }
 
     .main-text {
@@ -938,7 +940,7 @@ ins.adsbygoogle {
 }
 
 .hero-carousel img {
-    filter: brightness(0.7) blur(2px); /* Darken images so text pops */
+    filter: brightness(0.7) blur(3px); /* Darken images so text pops */
     transition: opacity 1.5s ease-in-out;
     box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
 }
@@ -953,11 +955,13 @@ ins.adsbygoogle {
 
 
 .hero-name {
-    font-size: clamp(1rem, 4.5vh, 8rem) !important;
+    font-size: clamp(1rem, 3.9vh, 8rem) !important;
     margin: 33vh 0 0 0 !important;
-    letter-spacing: 1.8px;
+    letter-spacing: 2.7px;
+    color: var(--main-color2);
+    text-shadow: 1px 1px 9px var(--secondary-color);
+    
 }
-
 
 
 .news-div2 {
