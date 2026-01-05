@@ -938,7 +938,7 @@ ins.adsbygoogle {
 }
 
 .hero-carousel img {
-    filter: brightness(0.8) blur(2px); /* Darken images so text pops */
+    filter: brightness(0.7) blur(2px); /* Darken images so text pops */
     transition: opacity 1.5s ease-in-out;
     box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
 }
