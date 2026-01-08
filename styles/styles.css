@@ -721,7 +721,7 @@ li {
 
      font-size: clamp(1rem, 4.5vh, 8rem) !important;
     margin: 0 0 0 0 !important;
-    letter-spacing: 2.7px;
+    letter-spacing: 1.5px;
     color: var(--secondary-color);
 }
 
