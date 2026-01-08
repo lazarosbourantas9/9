@@ -722,7 +722,7 @@ li {
 
      font-size: clamp(1rem, 4.5vh, 8rem) !important;
     letter-spacing: 1.2px;
-    color: var(--secondary-color);
+    color: var(--black3);
 }
 
 .hero-nav-links {
@@ -853,7 +853,7 @@ ins.adsbygoogle {
 
 /* Content Overlay Styling */
 .hero-overlay {
-    margin: 37vh 0 0 0 !important;
+    margin: 39vh 0 0 0 !important;
     position: relative;
     z-index: 5;
     padding: 12px 30px;
@@ -863,12 +863,12 @@ ins.adsbygoogle {
     background: rgba(255, 255, 255, 0.1);
 
     /* ✨ Blur the background underneath */
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
 
     /* Optional aesthetics */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
 
     display: inline-block;   /* shrink to fit */
     width: auto;             /* ensure it doesn't stretch */
