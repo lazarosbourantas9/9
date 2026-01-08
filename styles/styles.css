@@ -189,7 +189,7 @@ body {
 
 
 .nav-scroll {
-    font-size: 1.8vw;
+    font-size: 1.2vw;
     color: var(--main-color);
     font-weight: bold;
     letter-spacing: 1.5px;
@@ -711,7 +711,6 @@ li {
 
 .hero-name {
     position: relative; 
-    font-size: 3vh; 
     font-weight: lighter; 
     color: var(--secondary-color2); 
     z-index: 2; 
@@ -721,13 +720,13 @@ li {
     margin-left: 15px; 
     margin-bottom: 15px;
 
-     font-size: clamp(1rem, 4.5vh, 8rem) !important;
+     font-size: clamp(1rem, 3vh, 8rem) !important;
     letter-spacing: 1.2px;
     color: var(--black3);
 }
 
 .hero-nav-links {
-    font-size: 3vh; 
+    font-size: 1.5vh; 
     position: relative; 
     z-index: 3; 
     text-align: center; 
@@ -846,7 +845,7 @@ ins.adsbygoogle {
 }
 
 .hero-carousel img {
-    filter: brightness(0.7) blur(1px); /* Darken images so text pops */
+    filter: brightness(0.9) blur(1px); /* Darken images so text pops */
     transition: opacity 1.5s ease-in-out;
     box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
 }
@@ -856,11 +855,11 @@ ins.adsbygoogle {
     margin: 39vh 0 0 0 !important;
     position: relative;
     z-index: 5;
-    padding: 12px 30px;
+    padding: 21px 30px;
     border-radius: 12px;
 
     /* ✨ Dark transparent background */
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.6);
 
     /* ✨ Blur the background underneath */
     backdrop-filter: blur(9px);
@@ -868,7 +867,7 @@ ins.adsbygoogle {
 
     /* Optional aesthetics */
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255, 0.6);
 
     display: inline-block;   /* shrink to fit */
     width: auto;             /* ensure it doesn't stretch */
@@ -952,8 +951,9 @@ ins.adsbygoogle {
     }
 
     .hero-name {
-    font-size: clamp(1rem, 2.1vh, 8rem) !important;
+    font-size: clamp(1rem, 1.5vh, 8rem) !important;
     margin-top: 0px;
+    margin-bottom: 15px;
     }
 
     .main-text {
