@@ -710,7 +710,7 @@ li {
 
 .hero-name {
     position: relative; 
-    font-size: 3.9vh; 
+    font-size: 3vh; 
     font-weight: bold; 
     color: var(--secondary-color2); 
     z-index: 2; 
@@ -721,11 +721,12 @@ li {
 
      font-size: clamp(1rem, 4.5vh, 8rem) !important;
     margin: 0 0 0 0 !important;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
     color: var(--secondary-color);
 }
 
 .hero-nav-links {
+    font-size: 3vh; 
     position: relative; 
     z-index: 3; 
     text-align: center; 
@@ -855,7 +856,7 @@ ins.adsbygoogle {
     margin: 35vh 0 0 0 !important;
     position: relative;
     z-index: 5;
-    padding: 9px 9px;
+    padding: 12px 12px;
     border-radius: 12px;
 
     /* ✨ Dark transparent background */
@@ -947,12 +948,12 @@ ins.adsbygoogle {
     }
 
     .nav-scroll {
-        font-size: 4.9vw;
+        font-size: 3.7vw;
         letter-spacing: 0px;
     }
 
     .hero-name {
-    font-size: clamp(1rem, 2.7vh, 8rem) !important;
+    font-size: clamp(1rem, 2.1vh, 8rem) !important;
     }
 
     .main-text {
