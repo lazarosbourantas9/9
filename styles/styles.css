@@ -191,7 +191,7 @@ body {
 .nav-scroll {
     font-size: 1.8vw;
     color: var(--main-color);
-    font-weight: lighter;
+    font-weight: bold;
 }
 
 li {
@@ -730,7 +730,7 @@ li {
     position: relative; 
     z-index: 3; 
     text-align: center; 
-    margin-top: 1.5vh; 
+    margin-top: 0vh; 
     margin-left: 0px;
     letter-spacing: 1px;
 }
