@@ -133,7 +133,7 @@ body {
 
 .title-text2 {
     font-family: "Old";
-    margin: 3vh;
+    margin: 4.5vh;
     margin-bottom: 3vh;
     text-align: center;
     font-size: 2.7vw;
@@ -595,7 +595,7 @@ li {
 /* --- CAROUSEL CONTAINER --- */
 .carousel {
     width: 100%;      /* adjust if needed */
-    height: 50vh;
+    height: 57vh;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 6px;
@@ -845,7 +845,7 @@ ins.adsbygoogle {
 }
 
 .hero-carousel img {
-    filter: brightness(0.9) blur(1px); /* Darken images so text pops */
+    filter: brightness(1) blur(2px); /* Darken images so text pops */
     transition: opacity 1.5s ease-in-out;
     box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
 }
@@ -859,7 +859,7 @@ ins.adsbygoogle {
     border-radius: 12px;
 
     /* ✨ Dark transparent background */
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
 
     /* ✨ Blur the background underneath */
     backdrop-filter: blur(9px);
@@ -947,7 +947,7 @@ ins.adsbygoogle {
     }
 
     .nav-scroll {
-        font-size: 3.7vw;
+        font-size: 3.4vw;
     }
 
     .hero-name {
