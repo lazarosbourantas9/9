@@ -453,8 +453,8 @@ li {
 }
 
 .icon-container img {
-    width: 15px;
-    height: 15px;
+    width: 18px;
+    height: 18px;
     padding: 3px;
     margin: auto;
     margin-bottom: 6px;
@@ -845,7 +845,7 @@ ins.adsbygoogle {
 }
 
 .hero-carousel img {
-    filter: brightness(1) blur(2px); /* Darken images so text pops */
+    filter: brightness(1) blur(4px); /* Darken images so text pops */
     transition: opacity 1.5s ease-in-out;
     box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
 }
