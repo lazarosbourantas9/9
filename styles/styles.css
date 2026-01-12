@@ -74,7 +74,7 @@ div {
 body {
     margin: auto;
     margin-top: 90px;
-    background-image: linear-gradient(to bottom right, var(--black2), var(--black4));
+    background-image: linear-gradient(to bottom right, var(--black4), var(--secondary-color));
     align-items: center;
     overflow-x: hidden;
 }
@@ -84,7 +84,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: var(--black);
+    background: var(--white);
     position: fixed;
     top: 0;
     left: 0;
@@ -497,7 +497,7 @@ li {
 .social-navbar {
     margin-top: 6px;
     height: 45px;
-    background-image: linear-gradient(to bottom right, var(--secondary-color), var(--main-color2));
+    background-image: linear-gradient(to bottom right, var(--secondary-color2), var(--white2));
     z-index: 9;
     padding: 0px 0;
     text-align: right;
@@ -845,7 +845,7 @@ ins.adsbygoogle {
 }
 
 .hero-carousel img {
-    filter: brightness(1) blur(3px); /* Darken images so text pops */
+    filter: brightness(1) blur(2px); /* Darken images so text pops */
     transition: opacity 1.5s ease-in-out;
     box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
 }
