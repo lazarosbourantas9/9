@@ -189,10 +189,10 @@ body {
 
 
 .nav-scroll {
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     color: var(--black);
-    font-weight: bold;
-    letter-spacing: 1.5px;
+    font-weight: bolder;
+    letter-spacing: 1.2px;
 }
 
 li {
@@ -853,7 +853,7 @@ ins.adsbygoogle {
     margin: 39vh 0 0 0 !important;
     position: relative;
     z-index: 5;
-    padding: 21px 30px;
+    padding: 24px 24px;
     border-radius: 12px;
 
     /* ✨ Dark transparent background */
@@ -941,7 +941,7 @@ ins.adsbygoogle {
     }
 
     .nav-scroll {
-        font-size: 3.4vw;
+        font-size: 3.7vw;
     }
 
     .hero-name {
