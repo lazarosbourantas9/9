@@ -560,6 +560,7 @@ li {
 
     /* pulse animation */
     animation: glowPulse 9s ease-in-out infinite;
+    
 }
 
 @keyframes glowPulse {
@@ -871,6 +872,7 @@ ins.adsbygoogle {
 
 .hero-carousel img {
     transition: opacity 1.5s ease-in-out;
+    filter: brightness(0.4);
 }
 
 /* Content Overlay Styling */
