@@ -868,11 +868,11 @@ ins.adsbygoogle {
     
     padding: 30px 45px;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.1); 
+    background: rgba(255, 255, 255, 0.2); 
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(9px);
     border: 1px solid rgba(255, 255, 255);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
     
     /* Animations: Combined your original Fade-In with the new Breathing */
     animation: fadeInUp 1s ease-out forwards, breathe 6s ease-in-out infinite;
@@ -901,12 +901,12 @@ ins.adsbygoogle {
 @keyframes breathe {
     0%, 100% { 
         transform: scale(1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.3);
     }
     50% { 
         transform: scale(1.03);
         border: 1px solid rgba(255, 255, 255, 0.4);
-        box-shadow: 0 12px 45px 0 rgba(255, 255, 255, 0.1);
+        box-shadow: 0 12px 45px 0 rgba(255, 255, 255, 0.2);
     }
 }
 
