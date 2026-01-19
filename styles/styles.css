@@ -544,25 +544,6 @@ li {
     color: black;
 }
 
-.collage2 {
-    height: clamp(330px, 90vh, 900px);
-    width: 100%;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
-    margin: auto;
-    background-color: var(--black);
-    background: radial-gradient(
-        circle at 90% 90%,
-        rgba(200,200,200,0.18) 0%,
-        rgba(30,30,30,0.06) 40%,
-        rgba(0,0,0,1) 85%
-    );
-
-    /* pulse animation */
-    animation: glowPulse 9s ease-in-out infinite;
-    
-}
-
 @keyframes glowPulse {
     0% { background-size: 130% 150%; }
     50% { background-size: 100% 100%; }
@@ -637,16 +618,17 @@ li {
         opacity: 1;
     }
     /* Stay visible and zoom slowly */
-    33.33% {
+    37.93% {
         opacity: 1;
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
     /* Fade Out */
     38.33% {
         opacity: 0;
-        transform: scale(1.15);
+        transform: scale(1.1);
     }
     100% {
+        transform: scale(1.15);
         opacity: 0;
     }
 }
@@ -846,20 +828,6 @@ ins.adsbygoogle {
     min-height: 100px;
 }
 
-
-
-
-
-/* Update the Hero Container */
-.collage2 {
-    position: relative;
-    height: 76vh; /* Increased height for impact */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
 /* Make carousel images act as background */
 .hero-carousel {
     position: absolute;
@@ -872,33 +840,88 @@ ins.adsbygoogle {
 
 .hero-carousel img {
     transition: opacity 1.5s ease-in-out;
-    filter: brightness(0.4);
+    filter: brightness(0.6)blur(2px);
 }
 
-/* Content Overlay Styling */
+.collage2 {
+    position: relative;
+    height: 69vh; 
+    display: flex;
+    /* Aligns the overlay to the bottom of the container */
+    align-items: flex-end;    
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: var(--black);
+    /* ADJUST THIS: Increase to move overlay up, decrease to move it down */
+    padding-bottom: 6vh;      
+    
+    animation: glowPulse 9s ease-in-out infinite;
+}
+
+/* 2. Fix the Overlay Positioning */
 .hero-overlay {
-    margin: 39vh 0 0 0 !important;
     position: relative;
     z-index: 5;
-    padding: 24px 24px;
-    border-radius: 12px;
-
-    /* ✨ Dark transparent background */
-    background: rgba(255, 255, 255, 0.4);
-
-    /* ✨ Blur the background underneath */
-    backdrop-filter: blur(9px);
-    -webkit-backdrop-filter: blur(9px);
-
-    /* Optional aesthetics */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    border: 1px solid rgba(255,255,255, 0.6);
-
-    display: inline-block;   /* shrink to fit */
-    width: auto;             /* ensure it doesn't stretch */
-    height: auto;
+    /* REMOVED: margin-top: 39vh !important; */
+    margin: 0 !important; 
+    
+    padding: 30px 45px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    
+    /* Animations: Combined your original Fade-In with the new Breathing */
+    animation: fadeInUp 1s ease-out forwards, breathe 6s ease-in-out infinite;
+    overflow: hidden;
 }
 
+/* 3. The Shimmer "Looping" Effect */
+.hero-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transform: skewX(-25deg);
+    animation: shimmer 8s infinite;
+}
+
+/* 4. Animation Keyframes */
+@keyframes breathe {
+    0%, 100% { 
+        transform: scale(1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    50% { 
+        transform: scale(1.03);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 12px 45px 0 rgba(255, 255, 255, 0.1);
+    }
+}
+
+@keyframes shimmer {
+    0% { left: -150%; }
+    20% { left: 150%; } /* Move across quickly */
+    100% { left: 150%; } /* Wait for the rest of the 8s */
+}
+
+/* Ensure the text inside is visible */
+.hero-nav-links {
+    position: relative;
+    z-index: 6;
+    margin: 0;
+}
 .news-div2 {
   position: relative;
   border-radius: 9px;
