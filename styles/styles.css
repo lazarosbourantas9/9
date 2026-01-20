@@ -600,13 +600,14 @@ li {
     border-radius: 3px;
     opacity: 0;
     /* Increased duration for smoother motion */
-    animation: kenBurnsFade 18s infinite; 
+    animation: kenBurnsFade 24s infinite; 
 }
 
 /* 18s total / 3 images = 6s per image */
 .carousel-track img:nth-child(1) { animation-delay: 0s; }
 .carousel-track img:nth-child(2) { animation-delay: 6s; }
 .carousel-track img:nth-child(3) { animation-delay: 12s; }
+.carousel-track img:nth-child(4) { animation-delay: 18s; }
 
 @keyframes kenBurnsFade {
     0% {
@@ -840,7 +841,6 @@ ins.adsbygoogle {
 
 .hero-carousel img {
     transition: opacity 1.5s ease-in-out;
-    filter: brightness(0.6)blur(2px);
 }
 
 .collage2 {
