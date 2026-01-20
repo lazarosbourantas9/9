@@ -494,24 +494,41 @@ li {
     transition: all 600ms;
 }
 
-.social-navbar {
-    margin-top: 6px;
-    height: 45px;
-    background-image: linear-gradient(to bottom right, var(--secondary-color2), var(--white2));
-    z-index: 9;
-    padding: 0px 0;
-    text-align: right;
-    padding-right: 12px;
-    padding-left: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    vertical-align: middle;
+.social-navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 30%;  /* Gives the streak a physical width */
+    height: 100%; /* Ensures it covers the full height of the bar */
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.6), 
+        transparent
+    );
+    transform: skewX(-25deg);
+    animation: shimmer 8s infinite; /* Uses your existing @keyframes shimmer */
+    z-index: 1;
+    pointer-events: none; /* Ensures the streak doesn't block clicks on your icons */
 }
 
 .social-icons a {
     margin: 12px;
     display: inline-block;
+}
+
+.social-navbar {
+    position: relative; /* Essential for aligning the shimmer inside */
+    overflow: hidden;    /* Essential for hiding the shimmer when it moves outside the bar */
+    margin-top: 6px;
+    height: 45px;
+    background-image: linear-gradient(to bottom right, var(--secondary-color2), var(--white2));
+    z-index: 9;
+    padding: 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-icon {
