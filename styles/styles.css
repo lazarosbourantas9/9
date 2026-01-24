@@ -348,7 +348,7 @@ li {
     object-fit: cover;
     border-radius: inherit;
     z-index: 1;
-    filter: brightness(0.55)blur(5px); 
+    filter: brightness(0.55)blur(3px); 
     transition: transform 0.6s ease-in-out, filter 0.6s ease-in-out;
 }
 
@@ -378,7 +378,7 @@ li {
 
 /* Hover effect */
 .news-div2:hover .latest-image {
-    filter: brightness(0.6) blur(3px);
+    filter: brightness(0.6) blur(2px);
     transform: scale(1.1);
 }
 
@@ -504,7 +504,7 @@ li {
     background: linear-gradient(
         to right,
         transparent,
-        rgba(255, 255, 255, 0.6), 
+        rgba(255, 255, 255, 0.9), 
         transparent
     );
     transform: skewX(-25deg);
@@ -907,7 +907,7 @@ ins.adsbygoogle {
     background: linear-gradient(
         to right,
         transparent,
-        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.7),
         transparent
     );
     transform: skewX(-25deg);
