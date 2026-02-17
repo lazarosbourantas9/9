@@ -30,13 +30,6 @@
             </a>
         </div>
     </nav>
-    <div class="collage2">
-    <div class="carousel-track hero-carousel">
-        <img src="icons/carousel/9.jpg">
-        <img src="icons/carousel/4.webp">
-        <img src="icons/carousel/1.jpg">
-        <img src="icons/carousel/2.jpg">
-    </div>
     <div class="hero-overlay fade-in-slide-up">    
         <p class="subtitle-text hero-nav-links">
             <a href="#latest" class="nav-scroll noSelect">LATEST |</a>
@@ -45,19 +38,16 @@
             <a href="#contact" class="nav-scroll noSelect"> CONTACT</a>
         </p>
     </div>
-</div>
-    <div style="width: 100%; height: 1px; margin-top: 0; margin-bottom: 6px; background-color: white; opacity: 0.3;"></div>
     <div class="home hidden" id="home"> 
         <p class="title-text2" id="latest" >
             LATEST
         </p>
-        <a href="https://lazarosbourantas9.github.io/Joyfy/" class="news-div2 noSelect hidden2">
+        <a style="display: none;" href="https://lazarosbourantas9.github.io/Joyfy/" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/joyfy.png" alt="">
             <div>
                 <p class="subtitle-text">JOYFY</p>
                 <p class="main-text">Games that focus on keeping people connected, sharpinning the mind and bringing joy.</p>
             </div>
-            <p style="display: none; margin: 6vw; margin-left: auto; position: absolute; right: 0; font-size: 0.9vw;" class="main-text">16/02/2025</p>
         </a>
         <a href="https://lazarosbourantas9.github.io/MetronHub/" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/MetronHub.svg" alt="">
@@ -65,7 +55,6 @@
                 <p class="subtitle-text">METRON HUB</p>
                 <p class="main-text">Applications I have developed, for your daily tracking and progress visualisation, on your browser.</p>
             </div>
-            <p style="display: none; margin: 6vw; margin-left: auto; position: absolute; right: 0; font-size: 0.9vw;" class="main-text">16/02/2025</p>
         </a>
         <a href="https://draquoinc.company.site/" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/draquo/0.jpg" alt="">
@@ -73,7 +62,6 @@
                 <p class="subtitle-text">"DRAQUOINC" E-SHOP</p>
                 <p class="main-text">Lightweight e-commerce site designed and deployed using Ecwid. Focused on simplicity and mobile usability.</p>
             </div>
-            <p style="display: none; margin: 6vw; margin-left: auto; position: absolute; right: 0; font-size: 0.9vw;" class="main-text">16/02/2025</p>
         </a>
         <a href="MorePages/oikoworthliving.html" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/oikoworthliving/oikoworthliving (5).jpg" alt="">
@@ -81,7 +69,7 @@
                 <p class="subtitle-text">PRESENTATION OF "Oiko Worth Living" WEBSITE</p>
                 <p class="main-text">Minimal website providing information about the "Oiko Worth Living" apartment in Ioannina, Greece.</p>
             </div>
-           </a>
+        </a>
         <a href="MorePages/karystosecret.html" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/karystosecret/1.jpg" alt="">
             <div>
@@ -92,6 +80,15 @@
         <p class="title-text2" id="services">
             BIO
         </p>
+        <div class="collage2">
+            <div class="carousel-track hero-carousel">
+                <img src="icons/carousel/9.jpg">
+                <img src="icons/carousel/4.webp">
+                <img src="icons/carousel/1.jpg">
+                <img src="icons/carousel/2.jpg">
+            </div>
+        </div>
+        <p class="main-text" style="text-align: center; margin-top: 30px; margin-bottom: 15px;">Born and raised in Evoia, Greece. Athlete. Studying Computer Science and Engineering.</p>
         <p class="main-text" style="text-align: center; margin-top: 30px; margin-bottom: 15px;">COMPUTER ENGINEERING EXPERTISE AND SERVICES:</p>
         <div class="expertise-div noSelect hidden2">
             <div class="expertise-header">
@@ -121,7 +118,6 @@
                 </p>
                 <span class="arrow">▼</span>
             </div>
-
             <div class="expertise-content">
                 <p class="main-text">
                     I create custom applications that are reliable, scalable, and intuitive. My work includes cross-platform solutions,
@@ -142,12 +138,10 @@
                 <p class="subtitle-text">DEVICE REPAIR, DIAGNOSTICS & UPGRADES</p>
                 <span class="arrow">▼</span>
             </div>
-
             <div class="expertise-content">
                 <p class="main-text">
                     Repairs and upgrades for PCs, laptops, and smartphones — including custom builds and component-level service.
                 </p>
-
                 <ul>
                     <li>Battery replacements</li>
                     <li>Cracked screen replacements</li>
@@ -162,7 +156,7 @@
             <div style="width: 90%; text-align: center;">
                 <p class="title-text" style="text-align: center; margin-bottom: 15px; margin-top: 0px;">CURRICULUM VITAE</p> 
                 <p class="subtitle-text hidden" style="text-align: center; margin-top: 0px;">REVISED: 2/2025</p> 
-                <button id="toggleCV"  class="cv-button" >
+                <button id="toggleCV" class="cv-button" >
                         VIEW C.V.
                 </button>
                 <div id="cvSection" style="display: none;">
@@ -185,8 +179,7 @@
                 style="display:flex; flex-direction:column; align-items:center; gap:10px; width:100%;">
                 <input type="email" name="email" required placeholder="Enter your email"
                     style="width: 70%; max-width: 400px; padding: 12px; border-radius: 6px; border:none;">
-                <button type="submit" 
-                        class="cv-button">
+                <button type="submit" class="cv-button">
                     SUBSCRIBE
                 </button>
             </form>

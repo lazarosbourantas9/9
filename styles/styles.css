@@ -323,12 +323,12 @@ li {
   background-position: center;
 
   border: 1px solid var(--secondary-color2);
-  box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.08);
+  box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
   position: relative;
   border-radius: 6px;
   overflow: hidden;
 
-  height: 270px;
+  height: 240px;
   padding: 45px;
   display: flex;
   justify-content: center;
@@ -348,7 +348,7 @@ li {
     object-fit: cover;
     border-radius: inherit;
     z-index: 1;
-    filter: brightness(0.55)blur(3px); 
+    filter: brightness(0.5)blur(3px); 
     transition: transform 0.6s ease-in-out, filter 0.6s ease-in-out;
 }
 
@@ -861,8 +861,9 @@ ins.adsbygoogle {
 }
 
 .collage2 {
+    border-radius: 15px;
     position: relative;
-    height: 69vh; 
+    height: 70vh; 
     display: flex;
     /* Aligns the overlay to the bottom of the container */
     align-items: flex-end;    
@@ -881,11 +882,11 @@ ins.adsbygoogle {
     position: relative;
     z-index: 5;
     /* REMOVED: margin-top: 39vh !important; */
-    margin: 0 !important; 
+    margin: 60px 30px !important; 
     
-    padding: 30px 45px;
+    padding: 24px 30px;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.2); 
+    background: rgba(255, 255, 255, 0.25); 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(9px);
     border: 1px solid rgba(255, 255, 255);
@@ -1056,7 +1057,7 @@ ins.adsbygoogle {
     }
 
     .collage2 {
-        height: calc(100vh - 195px);
+        height: calc(40vh);
     }
 
     .collage2-main-img {
