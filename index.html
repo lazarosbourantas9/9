@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lazaros Bourantas | MAIN PAGE</title>
     <link rel="icon" type="image/x-icon" href="icons/lm.webp">
-    <link rel="stylesheet" href="styles/styles.css">  
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
     <div class="header">
-        <a class="noSelect hidden" href="/index.html" style=" cursor: pointer; height: 45%; margin: auto; "> <img style="height: 100%; object-fit: fill;" src="icons/lm.webp"></a>
-        <div style="width: 100%; height: 1px; margin-bottom: 6px; background-color: white;"></div>          
+        <a class="noSelect hidden" href="/index.html" style=" cursor: pointer; height: 45%; margin: auto; "> <img
+                style="height: 100%; object-fit: fill;" src="icons/lm.webp"></a>
+        <div style="width: 100%; height: 1px; margin-bottom: 6px; background-color: white;"></div>
     </div>
-    <nav class="social-navbar noSelect">
-        <div class="social-icons">
+    <nav class="page-navbar noSelect">
+        <p class="subtitle-text hero-nav-links" style="margin: 0; letter-spacing: 3px;">
+            <a href="#latest" class="nav-scroll noSelect">LATEST</a>
+            &nbsp;|&nbsp;
+            <a href="#services" class="nav-scroll noSelect">BIO</a>
+            &nbsp;|&nbsp;
+            <a href="#cv" class="nav-scroll noSelect">CV</a>
+            &nbsp;|&nbsp;
+            <a href="#contact" class="nav-scroll noSelect">CONTACT</a>
+        </p>
+    </nav>
+    <div class="social-overlay fade-in-slide-up" style="padding: 9px 20px; width: fit-content; margin: 30px auto;">
+        <div class="social-icons" style="justify-content: center;">
             <a href="https://www.instagram.com/lazarosbourantas/" target="_blank" title="Instagram">
                 <img src="icons/iglogo.svg" alt="Instagram" class="nav-icon">
             </a>
@@ -23,60 +37,55 @@
             <a style="display: none;" href="https://www.youtube.com/@LazarosBourantas" target="_blank" title="YouTube">
                 <img src="icons/youtubelogo.svg" alt="YouTube" class="nav-icon">
             </a>
-        </div>
-        <div class="social-icons" style="margin-right: 0px;">
             <a href="#" id="shareButton" title="Share">
-                <img src="icons/sharesymbol.svg" alt="Share" class="nav-icon" >
+                <img src="icons/sharesymbol.svg" alt="Share" class="nav-icon">
             </a>
         </div>
-    </nav>
-    <div class="hero-overlay fade-in-slide-up">    
-        <p class="subtitle-text hero-nav-links">
-            <a href="#latest" class="nav-scroll noSelect">LATEST |</a>
-            <a href="#services" class="nav-scroll noSelect"> BIO |</a>
-            <a href="#cv" class="nav-scroll noSelect"> CV |</a>
-            <a href="#contact" class="nav-scroll noSelect"> CONTACT</a>
-        </p>
     </div>
-    <div class="home hidden" id="home"> 
-        <p class="title-text2" id="latest" >
+    <div class="home hidden" id="home">
+        <p class="title-text2" id="latest">
             LATEST
         </p>
         <a style="display: none;" href="https://lazarosbourantas9.github.io/Joyfy/" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/joyfy.png" alt="">
             <div>
                 <p class="subtitle-text">JOYFY</p>
-                <p class="main-text">Games that focus on keeping people connected, sharpinning the mind and bringing joy.</p>
+                <p class="main-text">Games that focus on keeping people connected, sharpinning the mind and bringing
+                    joy.</p>
             </div>
         </a>
         <a href="https://lazarosbourantas9.github.io/MetronHub/" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/MetronHub.svg" alt="">
             <div>
                 <p class="subtitle-text">METRON HUB</p>
-                <p class="main-text">Applications I have developed, for your daily tracking and progress visualisation, on your browser.</p>
+                <p class="main-text">Applications I have developed, for your daily tracking and progress visualisation,
+                    on your browser.</p>
             </div>
         </a>
         <a href="https://draquoinc.company.site/" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/draquo/0.jpg" alt="">
             <div>
                 <p class="subtitle-text">"DRAQUOINC" E-SHOP</p>
-                <p class="main-text">Lightweight e-commerce site designed and deployed using Ecwid. Focused on simplicity and mobile usability.</p>
+                <p class="main-text">Lightweight e-commerce site designed and deployed using Ecwid. Focused on
+                    simplicity and mobile usability.</p>
             </div>
         </a>
         <a href="MorePages/oikoworthliving.html" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/oikoworthliving/oikoworthliving (5).jpg" alt="">
             <div>
                 <p class="subtitle-text">PRESENTATION OF "Oiko Worth Living" WEBSITE</p>
-                <p class="main-text">Minimal website providing information about the "Oiko Worth Living" apartment in Ioannina, Greece.</p>
+                <p class="main-text">Minimal website providing information about the "Oiko Worth Living" apartment in
+                    Ioannina, Greece.</p>
             </div>
         </a>
         <a href="MorePages/karystosecret.html" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/karystosecret/1.jpg" alt="">
             <div>
                 <p class="subtitle-text">PRESENTATION OF "KARYSTOSECRET.GR" WEBSITE</p>
-                <p class="main-text">Showcasing the beauty of Karystos, Evia, with easy navigation and nature-inspired design.</p>
+                <p class="main-text">Showcasing the beauty of Karystos, Evia, with easy navigation and nature-inspired
+                    design.</p>
             </div>
-        </a> 
+        </a>
         <p class="title-text2" id="services">
             BIO
         </p>
@@ -88,8 +97,10 @@
                 <img src="icons/carousel/2.jpg">
             </div>
         </div>
-        <p class="main-text" style="text-align: center; margin-top: 30px; margin-bottom: 15px;">Born and raised in Evoia, Greece. Athlete. Studying Computer Science and Engineering.</p>
-        <p class="main-text" style="text-align: center; margin-top: 30px; margin-bottom: 15px;">COMPUTER ENGINEERING EXPERTISE AND SERVICES:</p>
+        <p class="main-text" style="text-align: center; margin-top: 30px; margin-bottom: 15px;">Born and raised in
+            Evoia, Greece. Athlete. Studying Computer Science and Engineering.</p>
+        <p class="main-text" style="text-align: center; margin-top: 30px; margin-bottom: 15px;">COMPUTER ENGINEERING
+            EXPERTISE AND SERVICES:</p>
         <div class="expertise-div noSelect hidden2">
             <div class="expertise-header">
                 <p class="subtitle-text">WEBSITE DESIGN & DEVELOPMENT</p>
@@ -98,7 +109,8 @@
 
             <div class="expertise-content">
                 <p class="main-text">
-                    Custom-built, responsive websites designed for performance, usability, and a seamless experience across all devices.
+                    Custom-built, responsive websites designed for performance, usability, and a seamless experience
+                    across all devices.
                 </p>
                 <ul>
                     <li>Modern, mobile-friendly and fast-loading designs</li>
@@ -120,16 +132,21 @@
             </div>
             <div class="expertise-content">
                 <p class="main-text">
-                    I create custom applications that are reliable, scalable, and intuitive. My work includes cross-platform solutions,
-                    API and third-party integrations, scheduled automation, and custom dashboards for real-time insights.
+                    I create custom applications that are reliable, scalable, and intuitive. My work includes
+                    cross-platform solutions,
+                    API and third-party integrations, scheduled automation, and custom dashboards for real-time
+                    insights.
                 </p>
                 <p class="main-text">
-                    I design, optimize, and maintain SQL and NoSQL databases, covering architecture, normalization, backups,
+                    I design, optimize, and maintain SQL and NoSQL databases, covering architecture, normalization,
+                    backups,
                     migrations, performance tuning, and security enforcement.
                 </p>
                 <p class="main-text">
-                    I build automation systems that reduce manual work, prevent errors, and improve productivity — including data
-                    processing, reporting, notification workflows, web scraping, API-driven tasks, and intelligent scheduling.
+                    I build automation systems that reduce manual work, prevent errors, and improve productivity —
+                    including data
+                    processing, reporting, notification workflows, web scraping, API-driven tasks, and intelligent
+                    scheduling.
                 </p>
             </div>
         </div>
@@ -140,7 +157,8 @@
             </div>
             <div class="expertise-content">
                 <p class="main-text">
-                    Repairs and upgrades for PCs, laptops, and smartphones — including custom builds and component-level service.
+                    Repairs and upgrades for PCs, laptops, and smartphones — including custom builds and component-level
+                    service.
                 </p>
                 <ul>
                     <li>Battery replacements</li>
@@ -154,28 +172,39 @@
         </div>
         <div id="cv" class="icon-container noSelect" style="height: auto; padding-top: 60px; padding-bottom: 60px;">
             <div style="width: 90%; text-align: center;">
-                <p class="title-text" style="text-align: center; margin-bottom: 15px; margin-top: 0px;">CURRICULUM VITAE</p> 
-                <p class="subtitle-text hidden" style="text-align: center; margin-top: 0px;">REVISED: 2/2025</p> 
-                <button id="toggleCV" class="cv-button" >
-                        VIEW C.V.
+                <p class="title-text" style="text-align: center; margin-bottom: 15px; margin-top: 0px;">CURRICULUM VITAE
+                </p>
+                <p class="subtitle-text hidden" style="text-align: center; margin-top: 0px;">REVISED: 2/2025</p>
+                <button id="toggleCV" class="cv-button">
+                    VIEW C.V.
                 </button>
                 <div id="cvSection" style="display: none;">
-                    <p style="color: white; margin-top: 30px; margin-bottom: 15px;" class="subtitle-text">PERSONAL DETAILS</p>
+                    <p style="color: white; margin-top: 30px; margin-bottom: 15px;" class="subtitle-text">PERSONAL
+                        DETAILS</p>
                     <p style="text-align: start; margin-bottom: 6px;" class="main-text">Name: Lazaros Bourantas</p>
                     <p style="color: white; margin-top: 30px;" class="subtitle-text">EDUCATION</p>
-                    <ul><li>Computer Science and Engineering, University of Ioannina, Greece, (2021 - Present)</li> <li>Corporate Identity and Personal Branding: Strategies and Techniques for Enhancing Influence in the Professional Space, National and Kapodistrian University of Athens E-Learning Sertificate</li> <li>Google Courses for AI</li></ul>
+                    <ul>
+                        <li>Computer Science and Engineering, University of Ioannina, Greece, (2021 - Present)</li>
+                        <li>Corporate Identity and Personal Branding: Strategies and Techniques for Enhancing Influence
+                            in the Professional Space, National and Kapodistrian University of Athens E-Learning
+                            Sertificate</li>
+                        <li>Google Courses for AI</li>
+                    </ul>
                     <p style="color: white; margin-top: 24px;" class="subtitle-text">LANGUAGES</p>
-                    <ul><li>Greek (native)</li>
-                    <li>English (fluent)</li></ul>
+                    <ul>
+                        <li>Greek (native)</li>
+                        <li>English (fluent)</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="icon-container" style="border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; margin-bottom: 0px; height: auto; padding-top: 60px; padding-bottom: 60px;">
-            <p class="title-text"  style="text-align: center; margin-bottom: 15px; margin-top: 0px;">NEWSLETTER</p>
+        <div class="icon-container"
+            style="border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; margin-bottom: 0px; height: auto; padding-top: 60px; padding-bottom: 60px;">
+            <p class="title-text" style="text-align: center; margin-bottom: 15px; margin-top: 0px;">NEWSLETTER</p>
             <p class="main-text" style="text-align: center;">
                 Stay updated with my latest projects, releases, and announcements.
             </p>
-            <form action="subscribe.php" method="POST" 
+            <form action="subscribe.php" method="POST"
                 style="display:flex; flex-direction:column; align-items:center; gap:10px; width:100%;">
                 <input type="email" name="email" required placeholder="Enter your email"
                     style="width: 70%; max-width: 400px; padding: 12px; border-radius: 6px; border:none;">
@@ -184,34 +213,42 @@
                 </button>
             </form>
         </div>
-        <div class="icon-container" id="contact" style="border-top-right-radius: 0px; border-top-left-radius:0px; margin-top: 0px;">
-            <div class="icon-div" title="lazarosbourantas9@gmail.com" onclick="copyToClipboard(event, 'lazarosbourantas9@gmail.com')">
-                <p class="subtitle-text" style="margin: 0px; text-align: center; padding: 0px;">For business inquiries, contact:</p>
+        <div class="icon-container" id="contact"
+            style="border-top-right-radius: 0px; border-top-left-radius:0px; margin-top: 0px;">
+            <div class="icon-div" title="lazarosbourantas9@gmail.com"
+                onclick="copyToClipboard(event, 'lazarosbourantas9@gmail.com')">
+                <p class="subtitle-text" style="margin: 0px; text-align: center; padding: 0px;">For business inquiries,
+                    contact:</p>
                 <p class="promo-text hidden" style="margin-top: 1.2vw;">lazarosbourantas9@gmail.com</p>
             </div>
             <div style="display: flex;">
-                <a class="icon-div" href="https://www.instagram.com/lazarosbourantas/" target="_blank" title="@lazarosbourantas">
+                <a class="icon-div" href="https://www.instagram.com/lazarosbourantas/" target="_blank"
+                    title="@lazarosbourantas">
                     <img loading="lazy" src="icons/iglogo.svg" alt="Instagram Icon">
                 </a>
-                <a class="icon-div" href="https://www.linkedin.com/in/lazarosbourantas/" target="_blank" title="@lazarosbourantas">
+                <a class="icon-div" href="https://www.linkedin.com/in/lazarosbourantas/" target="_blank"
+                    title="@lazarosbourantas">
                     <img loading="lazy" src="icons/linlogo.svg" alt="LinkedIn Icon">
                 </a>
-                <a style="display: none;" class="icon-div" href="https://www.youtube.com/@LazarosBourantas" target="_blank" title="@lazarosbourantas">
+                <a style="display: none;" class="icon-div" href="https://www.youtube.com/@LazarosBourantas"
+                    target="_blank" title="@lazarosbourantas">
                     <img loading="lazy" src="icons/youtubelogo.svg" alt="Youtube Icon">
                 </a>
             </div>
-        </div> 
-    </div>           
-    <div class="bottom-header">  
-        <a class="noSelect hidden" href="/index.html" style=" cursor: pointer; height: 60px; margin: auto; margin-top: 60px; margin-bottom: 60px; opacity: 0.3;"> <img style="height: 100%; object-fit: fill;" src="icons/lm.webp"></a>
-        <a class="promo-text" href="privacy.html">Privacy Policy</a>     
+        </div>
+    </div>
+    <div class="bottom-header">
+        <a class="noSelect hidden" href="/index.html"
+            style=" cursor: pointer; height: 60px; margin: auto; margin-top: 60px; margin-bottom: 60px; opacity: 0.3;">
+            <img style="height: 100%; object-fit: fill;" src="icons/lm.webp"></a>
+        <a class="promo-text" href="privacy.html">Privacy Policy</a>
         <p class="promo-text">© 2024 LAZAROS BOURANTAS, All Rights Reserved.</p>
     </div>
     <script>
-        document.getElementById("toggleCV").addEventListener("click", function() {
+        document.getElementById("toggleCV").addEventListener("click", function () {
             var cvSection = document.getElementById("cvSection");
             var button = document.getElementById("toggleCV");
-    
+
             if (cvSection.style.display === "none" || cvSection.style.display === "") {
                 cvSection.style.display = "block";
                 button.textContent = "HIDE C.V.";
@@ -230,21 +267,22 @@
                     text: 'Check out lazarosbourantas.com',
                     url: window.location.href,
                 })
-                .then(() => console.log('Successfully shared'))
-                .catch((error) => console.error('Error sharing:', error));
+                    .then(() => console.log('Successfully shared'))
+                    .catch((error) => console.error('Error sharing:', error));
             } else {
                 alert("Sharing is not supported in this browser. Please copy the link manually.");
             }
         });
-    </script>    
-    <script>
-    document.querySelectorAll(".expertise-header").forEach(header => {
-        header.addEventListener("click", () => {
-            const parent = header.closest(".expertise-div");
-            parent.classList.toggle("active");
-        });
-    });
     </script>
-    <script src="scripts/app.js"></script> 
+    <script>
+        document.querySelectorAll(".expertise-header").forEach(header => {
+            header.addEventListener("click", () => {
+                const parent = header.closest(".expertise-div");
+                parent.classList.toggle("active");
+            });
+        });
+    </script>
+    <script src="scripts/app.js"></script>
 </body>
+
 </html>

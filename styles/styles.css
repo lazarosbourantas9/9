@@ -37,9 +37,11 @@ html {
     background-color: black;
     margin: 0;
     padding: 0;
+    scroll-padding-top: 100px;
 }
 
-p, li {
+p,
+li {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -89,7 +91,8 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.75); /* adjust opacity as needed */
+    background: rgba(0, 0, 0, 0.75);
+    /* adjust opacity as needed */
     backdrop-filter: blur(21px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 3px solid var(--white);
@@ -214,19 +217,21 @@ li {
     border-radius: 9px;
     padding: 15px;
     padding-top: 45px;
-    padding-bottom: 45px;   
+    padding-bottom: 45px;
     margin-top: 6px;
     margin-bottom: 6px;
 
     display: flex;
-    flex-direction: column; /* 👈 IMPORTANT */
+    flex-direction: column;
+    /* 👈 IMPORTANT */
 }
 
 /* ================= HEADER ================= */
 .expertise-header {
     width: 100%;
     display: flex;
-    flex-direction: column;     /* title then arrow */
+    flex-direction: column;
+    /* title then arrow */
     align-items: flex-start;
     cursor: pointer;
 }
@@ -257,7 +262,8 @@ li {
 
 /* ================= EXPANDED STATE ================= */
 .expertise-div.active .expertise-content {
-    max-height: 1200px; /* safe height */
+    max-height: 1200px;
+    /* safe height */
     opacity: 1;
 }
 
@@ -275,27 +281,32 @@ li {
 
 .repair-bg {
     position: relative;
-    overflow: hidden; /* keeps the blur inside the rounded corners */
+    overflow: hidden;
+    /* keeps the blur inside the rounded corners */
 }
 
 .repair-bg::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("../icons/repairs.jpg"); /* your image */
+    background-image: url("../icons/repairs.jpg");
+    /* your image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    filter: blur(2px) brightness(0.5);       /* <-- the blur */
-    transform: scale(1.1);   /* prevents edge clipping after blur */
+    filter: blur(2px) brightness(0.5);
+    /* <-- the blur */
+    transform: scale(1.1);
+    /* prevents edge clipping after blur */
 
     z-index: 0;
 }
 
-.repair-bg > * {
+.repair-bg>* {
     position: relative;
-    z-index: 1; /* keeps your text and content sharp */
+    z-index: 1;
+    /* keeps your text and content sharp */
 }
 
 
@@ -303,7 +314,7 @@ li {
 
 /* Make the old structure behave like a background-card layout */
 
-.news-div{
+.news-div {
     background-image: linear-gradient(to bottom right, var(--secondary-color), var(--main-color2));
     border: 1px solid var(--main-color);
     box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.08);
@@ -318,24 +329,24 @@ li {
 }
 
 .news-div2 {
-  background-color: black;
-  background-size: cover;
-  background-position: center;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
 
-  border: 1px solid var(--secondary-color2);
-  box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
-  position: relative;
-  border-radius: 6px;
-  overflow: hidden;
+    border: 1px solid var(--secondary-color2);
+    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
 
-  height: 240px;
-  padding: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 240px;
+    padding: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  margin-top: 6px;
-  margin-bottom: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 
 /* Make the <img> become the background */
@@ -348,12 +359,12 @@ li {
     object-fit: cover;
     border-radius: inherit;
     z-index: 1;
-    filter: brightness(0.5)blur(3px); 
+    filter: brightness(0.5)blur(3px);
     transition: transform 0.6s ease-in-out, filter 0.6s ease-in-out;
 }
 
 /* Center the text container */
-.news-div2 > div {
+.news-div2>div {
     position: relative !important;
     z-index: 2 !important;
     width: 100% !important;
@@ -412,7 +423,7 @@ li {
 
 .photo img {
     width: 100%;
-    height: 100%; 
+    height: 100%;
     object-fit: cover;
     border-radius: 3px;
 }
@@ -494,23 +505,25 @@ li {
     transition: all 600ms;
 }
 
-.social-navbar::before {
+.page-navbar::before {
     content: "";
     position: absolute;
     top: 0;
     left: -150%;
-    width: 30%;  /* Gives the streak a physical width */
-    height: 100%; /* Ensures it covers the full height of the bar */
-    background: linear-gradient(
-        to right,
-        transparent,
-        rgba(255, 255, 255, 0.9), 
-        transparent
-    );
+    width: 30%;
+    /* Gives the streak a physical width */
+    height: 100%;
+    /* Ensures it covers the full height of the bar */
+    background: linear-gradient(to right,
+            transparent,
+            rgba(255, 255, 255, 0.9),
+            transparent);
     transform: skewX(-25deg);
-    animation: shimmer 8s infinite; /* Uses your existing @keyframes shimmer */
+    animation: shimmer 8s infinite;
+    /* Uses your existing @keyframes shimmer */
     z-index: 1;
-    pointer-events: none; /* Ensures the streak doesn't block clicks on your icons */
+    pointer-events: none;
+    /* Ensures the streak doesn't block clicks on your icons */
 }
 
 .social-icons a {
@@ -518,16 +531,18 @@ li {
     display: inline-block;
 }
 
-.social-navbar {
-    position: relative; /* Essential for aligning the shimmer inside */
-    overflow: hidden;    /* Essential for hiding the shimmer when it moves outside the bar */
+.page-navbar {
+    position: relative;
+    /* Essential for aligning the shimmer inside */
+    overflow: hidden;
+    /* Essential for hiding the shimmer when it moves outside the bar */
     margin-top: 6px;
     height: 45px;
     background-image: linear-gradient(to bottom right, var(--secondary-color2), var(--white2));
     z-index: 9;
     padding: 0 12px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -562,27 +577,17 @@ li {
 }
 
 @keyframes glowPulse {
-    0% { background-size: 130% 150%; }
-    50% { background-size: 100% 100%; }
-    100% { background-size: 130% 150%; }
-}
+    0% {
+        background-size: 130% 150%;
+    }
 
+    50% {
+        background-size: 100% 100%;
+    }
 
-
-.collage2-main-img {
-    display: block;
-    width: 22vh;
-    height: 22vh;
-    border-radius: 100%;
-    object-fit: cover;
-    object-position: center;
-    background-color: transparent;
-    position: relative;
-    z-index: 1;
-    margin: auto;
-    margin-top: 22vh;
-    border: 1px solid var(--black4);
-    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+    100% {
+        background-size: 130% 150%;
+    }
 }
 
 .fade-in-slide-up {
@@ -591,20 +596,10 @@ li {
     animation: fadeInUp 1s ease-out forwards;
 }
 
-/* --- CAROUSEL CONTAINER --- */
-.carousel {
-    width: 100%;      /* adjust if needed */
-    height: 57vh;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 6px;
-    position: relative;
-}
-
 .carousel-track {
-  position: relative;
-  width: 100%;
-  height: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 /* --- FIXED & SMOOTH KEN BURNS CAROUSEL --- */
@@ -617,34 +612,49 @@ li {
     border-radius: 3px;
     opacity: 0;
     /* Increased duration for smoother motion */
-    animation: kenBurnsFade 24s infinite; 
+    animation: kenBurnsFade 24s infinite;
 }
 
 /* 18s total / 3 images = 6s per image */
-.carousel-track img:nth-child(1) { animation-delay: 0s; }
-.carousel-track img:nth-child(2) { animation-delay: 6s; }
-.carousel-track img:nth-child(3) { animation-delay: 12s; }
-.carousel-track img:nth-child(4) { animation-delay: 18s; }
+.carousel-track img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.carousel-track img:nth-child(2) {
+    animation-delay: 6s;
+}
+
+.carousel-track img:nth-child(3) {
+    animation-delay: 12s;
+}
+
+.carousel-track img:nth-child(4) {
+    animation-delay: 18s;
+}
 
 @keyframes kenBurnsFade {
     0% {
         opacity: 0;
         transform: scale(1);
     }
+
     /* Fade In */
     5% {
         opacity: 1;
     }
+
     /* Stay visible and zoom slowly */
     37.93% {
         opacity: 1;
         transform: scale(1.05);
     }
+
     /* Fade Out */
     38.33% {
         opacity: 0;
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1.15);
         opacity: 0;
@@ -652,11 +662,28 @@ li {
 }
 
 @keyframes fade {
-  0% { opacity: 0; }
-  5% { opacity: 1; }         /* Fade in during the first 0.75s */
-  33.33% { opacity: 1; }     /* Stay fully visible until 5s */
-  38.33% { opacity: 0; }     /* Fade out over the next 0.75s */
-  100% { opacity: 0; }
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    /* Fade in during the first 0.75s */
+    33.33% {
+        opacity: 1;
+    }
+
+    /* Stay fully visible until 5s */
+    38.33% {
+        opacity: 0;
+    }
+
+    /* Fade out over the next 0.75s */
+    100% {
+        opacity: 0;
+    }
 }
 
 
@@ -678,12 +705,14 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 30px; /* Replaces inline margins */
+    padding: 0 30px;
+    /* Replaces inline margins */
 }
 
 /* Specific styling for the date/timestamp that was display:none */
 .news-date {
-    display: none; /* Keep hidden as per original design */
+    display: none;
+    /* Keep hidden as per original design */
     margin: 6vw;
     margin-left: auto;
     position: absolute;
@@ -691,160 +720,15 @@ li {
     font-size: 0.9vw;
 }
 
-/* CV Section specific styling */
-#cvSection {
-    display: none;
-    margin-top: 30px;
-}
-
-.cv-heading {
-    color: var(--white);
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-/* Separator lines (BIO section) */
-.bio-separator {
-    margin-bottom: 12px;
-    border: 1.5px solid rgb(132, 132, 132);
-    outline: none;
-}
-
-/* --- Missing Layout Classes --- */
-
-/* Fixes the Header and Section Divider */
-.header-line {
-    width: 100%; 
-    height: 1px; 
-    margin-bottom: 6px; 
-    background-color: white;
-}
-
-.section-divider {
-    width: 100%; 
-    height: 1px; 
-    margin-top: 0; 
-    margin-bottom: 6px; 
-    background-color: white; 
-    opacity: 0.3;
-}
-
-/* Fixes Hero/Title Text Positioning */
-.hero-text-container {
-    position: absolute; 
-    width: 100%;
-}
-
-.hero-name {
-    position: relative; 
-    font-weight: lighter; 
-    color: var(--secondary-color2); 
-    z-index: 2; 
-    width: auto; 
-    margin-top: 0px;
-    margin-right: 15px; 
-    margin-left: 15px; 
-    margin-bottom: 15px;
-
-     font-size: clamp(1rem, 3vh, 8rem) !important;
-    letter-spacing: 1.2px;
-    color: var(--black3);
-}
-
 .hero-nav-links {
-    font-size: 1.5vh; 
-    position: relative; 
-    z-index: 3; 
-    text-align: center; 
-    margin-top: 0vh; 
+    font-size: 1.5vh;
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    margin-top: 0vh;
     margin-left: 0px;
 }
 
-/* Expertise Title spacing */
-.expertise-title {
-    text-align: center; 
-    margin-top: 30px; 
-    margin-bottom: 15px;
-}
-
-/* Fixes CV Section Layout */
-.cv-container {
-    height: auto; 
-    padding-top: 60px; 
-    padding-bottom: 60px;
-}
-
-.cv-wrapper {
-    width: 90%; 
-    text-align: center;
-}
-
-.cv-title {
-    text-align: center; 
-    margin-bottom: 15px; 
-    margin-top: 0px;
-}
-
-/* Newsletter & Contact Layouts */
-.newsletter-container {
-    border-bottom-right-radius: 0px; 
-    border-bottom-left-radius: 0px; 
-    margin-bottom: 0px; 
-    height: auto; 
-    padding-top: 60px; 
-    padding-bottom: 60px;
-}
-
-.newsletter-form {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    gap: 10px; 
-    width: 100%;
-}
-
-.newsletter-input {
-    width: 70%; 
-    max-width: 400px; 
-    padding: 12px; 
-    border-radius: 6px; 
-    border: none;
-}
-
-.contact-container {
-    border-top-right-radius: 0px; 
-    border-top-left-radius: 0px; 
-    margin-top: 0px;
-}
-
-.contact-prompt {
-    margin: 0px; 
-    text-align: center; 
-    padding: 0px;
-}
-
-.email-display {
-    margin-top: 1.2vw;
-}
-
-.contact-socials {
-    display: flex;
-}
-
-/* Footer Fixes */
-.footer-logo {
-    cursor: pointer; 
-    height: 21%; 
-    margin: auto; 
-    opacity: 0.3;
-}
-
-ins.adsbygoogle {
-    background: #222; /* Dark background to match your site */
-    border: 1px dashed #444;
-    display: block;
-    min-height: 100px;
-}
 
 /* Make carousel images act as background */
 .hero-carousel {
@@ -863,65 +747,67 @@ ins.adsbygoogle {
 .collage2 {
     border-radius: 15px;
     position: relative;
-    height: 70vh; 
+    height: 70vh;
     display: flex;
     /* Aligns the overlay to the bottom of the container */
-    align-items: flex-end;    
+    align-items: flex-end;
     justify-content: center;
     text-align: center;
     overflow: hidden;
     background-color: var(--black);
     /* ADJUST THIS: Increase to move overlay up, decrease to move it down */
-    padding-bottom: 6vh;      
-    
+    padding-bottom: 6vh;
+
     animation: glowPulse 9s ease-in-out infinite;
 }
 
-/* 2. Fix the Overlay Positioning */
-.hero-overlay {
+/* 2. Social Icons Overlay */
+.social-overlay {
     position: relative;
     z-index: 5;
-    /* REMOVED: margin-top: 39vh !important; */
-    margin: 60px 30px !important; 
-    
-    padding: 24px 30px;
+
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.25); 
+    background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(9px);
     border: 1px solid rgba(255, 255, 255);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
-    
-    /* Animations: Combined your original Fade-In with the new Breathing */
+
     animation: fadeInUp 1s ease-out forwards, breathe 6s ease-in-out infinite;
     overflow: hidden;
 }
 
+.social-overlay .social-icons a {
+    margin: 3px 30px;
+    /* remove vertical margin that was making the div too tall */
+}
+
 /* 3. The Shimmer "Looping" Effect */
-.hero-overlay::before {
+.social-overlay::before {
     content: "";
     position: absolute;
     top: 0;
     left: -150%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(
-        to right,
-        transparent,
-        rgba(255, 255, 255, 0.7),
-        transparent
-    );
+    background: linear-gradient(to right,
+            transparent,
+            rgba(255, 255, 255, 0.7),
+            transparent);
     transform: skewX(-25deg);
     animation: shimmer 8s infinite;
 }
 
 /* 4. Animation Keyframes */
 @keyframes breathe {
-    0%, 100% { 
+
+    0%,
+    100% {
         transform: scale(1);
         border: 1px solid rgba(255, 255, 255, 0.3);
     }
-    50% { 
+
+    50% {
         transform: scale(1.03);
         border: 1px solid rgba(255, 255, 255, 0.4);
         box-shadow: 0 12px 45px 0 rgba(255, 255, 255, 0.2);
@@ -929,9 +815,20 @@ ins.adsbygoogle {
 }
 
 @keyframes shimmer {
-    0% { left: -150%; }
-    20% { left: 150%; } /* Move across quickly */
-    100% { left: 150%; } /* Wait for the rest of the 8s */
+    0% {
+        left: -150%;
+    }
+
+    20% {
+        left: 150%;
+    }
+
+    /* Move across quickly */
+    100% {
+        left: 150%;
+    }
+
+    /* Wait for the rest of the 8s */
 }
 
 /* Ensure the text inside is visible */
@@ -940,29 +837,31 @@ ins.adsbygoogle {
     z-index: 6;
     margin: 0;
 }
+
 .news-div2 {
-  position: relative;
-  border-radius: 9px;
-  overflow: hidden;
+    position: relative;
+    border-radius: 9px;
+    overflow: hidden;
 }
 
 /* This creates the highlight layer ON TOP of the images */
 .news-div2::after {
-  content: "";
-  position: absolute;
-  inset: 0;               /* Stretch to fill the whole div */
-  pointer-events: none;    /* Crucial: allows you to click the images/links underneath */
-  z-index: 10;            /* Ensures it sits above the carousel images */
-  
-  /* The "Bright Bottom-Right" Effect */
-  background: linear-gradient(
-    135deg, 
-    rgba(255, 255, 255, 0) 60%, 
-    rgba(255, 255, 255, 0.36) 100%
-  );
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* Stretch to fill the whole div */
+    pointer-events: none;
+    /* Crucial: allows you to click the images/links underneath */
+    z-index: 10;
+    /* Ensures it sits above the carousel images */
 
-  /* Optional: Adds a bright "lip" to the bottom and right edges */
-  box-shadow: inset -2px -2px 10px rgba(255, 255, 255, 0.3);
+    /* The "Bright Bottom-Right" Effect */
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0) 60%,
+            rgba(255, 255, 255, 0.36) 100%);
+
+    /* Optional: Adds a bright "lip" to the bottom and right edges */
+    box-shadow: inset -2px -2px 10px rgba(255, 255, 255, 0.3);
 }
 
 
@@ -994,16 +893,17 @@ ins.adsbygoogle {
         margin-left: 3%;
         margin-right: 3%;
     }
-      
+
 
     .subtitle-text {
         font-size: 3.3vw;
         margin-bottom: 3px;
     }
 
-    .news-div2 .subtitle-text{
+    .news-div2 .subtitle-text {
         font-size: 4.8vw;
     }
+
     .news-div2 .main-text {
         font-size: 4.2vw;
     }
@@ -1013,9 +913,9 @@ ins.adsbygoogle {
     }
 
     .hero-name {
-    font-size: clamp(1rem, 1.5vh, 8rem) !important;
-    margin-top: 0px;
-    margin-bottom: 15px;
+        font-size: clamp(1rem, 1.5vh, 8rem) !important;
+        margin-top: 0px;
+        margin-bottom: 15px;
     }
 
     .main-text {
