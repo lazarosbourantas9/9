@@ -116,7 +116,7 @@ body {
 
 .home {
     margin: auto;
-    width: 85%;
+    width: 82%;
     z-index: 0;
     padding-bottom: 30px;
     padding-top: 0px;
@@ -329,7 +329,7 @@ li {
 }
 
 .news-div2 {
-    background-color: black;
+    background-color: var(--black4);
     background-size: cover;
     background-position: center;
 
@@ -397,6 +397,11 @@ li {
     transform: scaleX(1.005);
     border: 1px solid var(--main-color2);
     box-shadow: 3px 3px 30px rgba(255, 255, 255, 0.1);
+}
+
+.blog {
+    height: 180px;
+    padding: 15px;
 }
 
 .collage {
@@ -612,7 +617,7 @@ li {
     border-radius: 3px;
     opacity: 0;
     /* Increased duration for smoother motion */
-    animation: kenBurnsFade 24s infinite;
+    animation: kenBurnsFade 18s infinite;
 }
 
 /* 18s total / 3 images = 6s per image */
@@ -628,9 +633,6 @@ li {
     animation-delay: 12s;
 }
 
-.carousel-track img:nth-child(4) {
-    animation-delay: 18s;
-}
 
 @keyframes kenBurnsFade {
     0% {
