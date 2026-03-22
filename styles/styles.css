@@ -193,10 +193,11 @@ body {
 
 
 .nav-scroll {
-    font-size: 1.5vw;
+    font-size: 1.1vw;
     color: var(--black);
     font-weight: bolder;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.9px;
+    margin: 0 12px;
 }
 
 li {
@@ -365,7 +366,7 @@ li {
 }
 
 /* Center the text container */
-.news-div2>div {
+.news-div2>div:not(.card-shine) {
     position: relative !important;
     z-index: 2 !important;
     width: 100% !important;
@@ -679,7 +680,7 @@ li {
 
 
 /* Consolidation of inline styles from NEWS and BIO sections */
-.news-div2 div {
+.news-div2 div:not(.card-shine) {
     position: relative;
     z-index: 2;
     width: 100%;
@@ -890,7 +891,8 @@ li {
     }
 
     .nav-scroll {
-        font-size: 3.7vw;
+        font-size: 3vw;
+        margin: 0 3px;
     }
 
     .hero-name {
@@ -941,4 +943,102 @@ li {
         height: calc(30vh);
     }
 
+    /* Hide custom cursor on mobile */
+    .cursor-dot,
+    .cursor-glow {
+        display: none !important;
+    }
+}
+
+/* ================= CUSTOM CURSOR ================= */
+/* cursor: none is applied via JS (.elite-cursor class on html) */
+.elite-cursor,
+.elite-cursor *,
+.elite-cursor *::before,
+.elite-cursor *::after {
+    cursor: none !important;
+}
+
+.cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition: width 0.15s ease, height 0.15s ease, background 0.15s ease, opacity 0.3s ease;
+    mix-blend-mode: difference;
+    opacity: 0;
+}
+
+.cursor-dot.hovering {
+    width: 14px;
+    height: 14px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99998;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+    mix-blend-mode: screen;
+    opacity: 0;
+}
+
+.cursor-glow.hovering {
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, transparent 70%);
+}
+
+/* ================= 3D TILT CARDS ================= */
+.tilt-card {
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99), box-shadow 0.4s ease;
+}
+
+.card-shine {
+    position: absolute;
+    inset: 0;
+    z-index: 15;
+    pointer-events: none;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    background: radial-gradient(600px circle at var(--shine-x, 50%) var(--shine-y, 50%),
+            rgba(255, 255, 255, 0.12) 0%,
+            transparent 60%);
+}
+
+.tilt-card:hover .card-shine {
+    opacity: 1;
+}
+
+/* Restore normal cursor on pure-touch devices */
+@media (hover: none) and (pointer: coarse) {
+
+    .elite-cursor,
+    .elite-cursor *,
+    .elite-cursor *::before,
+    .elite-cursor *::after {
+        cursor: auto !important;
+    }
+
+    .cursor-dot,
+    .cursor-glow {
+        display: none !important;
+    }
 }
