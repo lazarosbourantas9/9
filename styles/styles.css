@@ -554,8 +554,8 @@ li {
 }
 
 .nav-icon {
-    height: 18px;
-    width: 18px;
+    height: 15px;
+    width: 15px;
     transition: transform 0.2s ease;
 }
 
@@ -940,7 +940,7 @@ li {
     }
 
     .collage2 {
-        height: calc(30vh);
+        height: calc(40vh);
     }
 
     /* Hide custom cursor on mobile */
