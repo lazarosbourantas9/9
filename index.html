@@ -11,7 +11,9 @@
 
 <body>
     <div class="header">
-        <a class="noSelect hidden" href="/index.html" style=" cursor: pointer; height: 45%; margin: auto; "> <img
+        <a class="noSelect hidden" href="/index.html"
+            style="cursor: pointer; height: 45%; margin: auto; transition: transform 0.3s ease;"
+            onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';"> <img
                 style="height: 100%; object-fit: fill;" src="icons/lm.webp"></a>
         <div style="width: 100%; height: 1px; margin-bottom: 6px; background-color: white;"></div>
     </div>
@@ -190,7 +192,8 @@
                 onclick="copyToClipboard(event, 'lazarosbourantas9@gmail.com')">
                 <p class="subtitle-text" style="margin: 0px; text-align: center; padding: 0px;">For business inquiries,
                     contact:</p>
-                <p class="promo-text hidden" style="margin-top: 1.2vw;">lazarosbourantas9@gmail.com</p>
+                <p class="main-text hidden" style="margin-top: 1.2vw; text-align: center;">lazarosbourantas9@gmail.com
+                </p>
             </div>
             <div style="display: flex;">
                 <a class="icon-div" href="https://www.instagram.com/lazarosbourantas/" target="_blank"
@@ -208,13 +211,44 @@
             </div>
         </div>
     </div>
-    <div class="bottom-header">
-        <a class="noSelect hidden" href="/index.html"
-            style=" cursor: pointer; height: 60px; margin: auto; margin-top: 60px; margin-bottom: 60px; opacity: 0.3;">
-            <img style="height: 100%; object-fit: fill;" src="icons/lm.webp"></a>
-        <a class="promo-text" href="privacy.html">Privacy Policy</a>
-        <p class="promo-text">© 2024 LAZAROS BOURANTAS, All Rights Reserved.</p>
-    </div>
+    <footer class="bottom-header"
+        style="box-sizing: border-box; height: auto; padding: 60px 20px 30px; text-align: center; gap: 25px;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+            <a class="noSelect" href="/index.html"
+                style="cursor: pointer; height: 70px; opacity: 0.6; transition: all 0.3s ease;"
+                onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';"
+                onmouseout="this.style.opacity='0.6'; this.style.transform='scale(1)';">
+                <img style="height: 100%; object-fit: contain;" src="icons/lm.webp" alt="Lazaros Bourantas Logo">
+            </a>
+            <p class="main-text"
+                style="text-align: center; max-width: 400px; margin: 0 auto; font-size: clamp(14px, 1.2vw, 16px); opacity: 0.8;">
+                Designing, developing, and engineering premium digital experiences.
+            </p>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 40px; margin-top: 30px; flex-wrap: wrap;">
+            <a class="promo-text" href="#contact"
+                style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
+                onmouseover="this.style.color='var(--white)';"
+                onmouseout="this.style.color='var(--secondary-color2)';">Contact</a>
+            <a class="promo-text" href="privacy.html"
+                style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
+                onmouseover="this.style.color='var(--white)';"
+                onmouseout="this.style.color='var(--secondary-color2)';">Privacy Policy</a>
+            <a class="promo-text" href="termsofservice.html"
+                style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
+                onmouseover="this.style.color='var(--white)';"
+                onmouseout="this.style.color='var(--secondary-color2)';">Terms of Service</a>
+        </div>
+
+        <div
+            style="width: 60%; height: 1px; background: linear-gradient(to right, transparent, var(--secondary-color), transparent); margin: 30px auto 10px;">
+        </div>
+
+        <p class="promo-text" style="font-size: clamp(9px, 0.9vw, 14px); opacity: 0.6; letter-spacing: 1px;">© 2024
+            LAZAROS BOURANTAS. ALL
+            RIGHTS RESERVED.</p>
+    </footer>
 
     <!-- Custom Cursor -->
     <div class="cursor-dot"></div>
