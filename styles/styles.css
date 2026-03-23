@@ -567,20 +567,26 @@ li {
     width: 240px;
     height: 45px;
     font-size: 2vh;
-    background-color: var(--main-color2);
+    background: linear-gradient(135deg, var(--secondary-color), var(--main-color2));
     color: white;
     cursor: pointer;
+    border: none;
     outline: rgb(255, 255, 255) solid 1.5px;
-    transition: background-color 0.2s ease;
+    transition: all 0.3s ease;
     margin: auto;
     margin-top: 30px;
     margin-bottom: 6px;
     text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
 }
 
 .cv-button:hover {
-    background-color: white;
+    background: linear-gradient(135deg, var(--white), var(--main-color));
     color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
 }
 
 @keyframes glowPulse {
@@ -1040,5 +1046,13 @@ li {
     .cursor-dot,
     .cursor-glow {
         display: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .cv-button {
+        font-size: 1.5vh;
+        width: 180px;
+        height: 40px;
     }
 }

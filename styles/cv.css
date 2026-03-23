@@ -1,0 +1,239 @@
+/* cv.css */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+
+
+:root {
+    --primary-color: #333333;
+    --secondary-color: #666666;
+    --accent-color: #999999;
+    --text-color: #222222;
+    --light-text: #555555;
+    --bg-color: #ffffff;
+    --sidebar-bg: #f2f2f2;
+    --border-color: #dddddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-color);
+    line-height: 1.5;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.cv-container {
+    width: 210mm;
+    min-height: 297mm;
+    background: var(--bg-color);
+    display: flex;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 30%;
+    background-color: var(--sidebar-bg);
+    padding: 0;
+    /* Removed margin/padding for image flush fit */
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar-content {
+    padding: 0 30px 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.profile-img-container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.profile-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.sidebar-section h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+
+.contact-info p {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    word-break: break-all;
+}
+
+.contact-info a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.skills-list,
+.languages-list {
+    list-style: none;
+}
+
+.skills-list li,
+.languages-list li {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Main Content Styling */
+.main-content {
+    width: 70%;
+    padding: 50px 40px;
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.header .subtitle {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-color);
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.item-title {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.item-date {
+    font-size: 0.85rem;
+    color: var(--light-text);
+}
+
+.item-subtitle {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.item-description {
+    font-size: 0.85rem;
+    color: var(--text-color);
+}
+
+.item-description ul {
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.item-description li {
+    margin-bottom: 3px;
+}
+
+/* Print Optimization */
+@media print {
+    body {
+        padding: 0;
+        background: none;
+    }
+
+    .cv-container {
+        box-shadow: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .cv-container {
+        flex-direction: column;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .main-content {
+        width: 100%;
+    }
+}
