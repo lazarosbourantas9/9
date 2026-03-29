@@ -107,7 +107,7 @@ async function copyToClipboard(event, email) {
 
 // ================= 3D TILT CARDS =================
 (function () {
-  var MAX_TILT = 6;
+  var MAX_TILT = 3;
 
   var cards = document.querySelectorAll('.news-div2, .expertise-div');
   if (!cards.length) return;
@@ -134,8 +134,8 @@ async function copyToClipboard(event, email) {
         var tiltY = ((x - centerX) / centerX) * MAX_TILT;
         var tiltX = ((centerY - y) / centerY) * MAX_TILT;
 
-        card.style.transform = 'perspective(800px) rotateX(' + tiltX + 'deg) rotateY(' + tiltY + 'deg) scale3d(1.02, 1.02, 1.02)';
-        card.style.boxShadow = (-tiltY * 1.5) + 'px ' + (tiltX * 1.5) + 'px 30px rgba(255, 255, 255, 0.08)';
+        card.style.transform = 'perspective(900px) rotateX(' + tiltX + 'deg) rotateY(' + tiltY + 'deg) scale3d(1.01, 1.01, 1.01)';
+        card.style.boxShadow = (-tiltY * 0.8) + 'px ' + (tiltX * 0.8) + 'px 20px rgba(255, 255, 255, 0.06)';
 
         var percentX = (x / rect.width) * 100;
         var percentY = (y / rect.height) * 100;
