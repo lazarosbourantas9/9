@@ -353,8 +353,8 @@ li {
     justify-content: center;
     align-items: center;
 
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-top: 9px;
+    margin-bottom: 9px;
 }
 
 /* Make the <img> become the background */
@@ -865,7 +865,7 @@ li {
 
 @media (max-width: 800px) {
     .home {
-        width: 97%;
+        width: 94%;
     }
 
     .header {
