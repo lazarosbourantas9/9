@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service | Lazaros Bourantas</title>
+    <link rel="icon" type="image/x-icon" href="icons/lm.webp">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -14,31 +15,41 @@
             style="cursor: pointer; height: 45%; margin: auto; transition: transform 0.3s ease;"
             onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';"> <img
                 style="height: 100%; object-fit: fill;" src="icons/lm.webp"></a>
+        <div class="lang-dropdown noSelect" id="lang-dropdown">
+            <button class="lang-btn" id="lang-toggle">
+                <span id="lang-current">ΕΛ</span>
+                <span class="lang-arrow">▾</span>
+            </button>
+            <ul class="lang-menu" id="lang-menu">
+                <li data-lang="en">EN</li>
+                <li data-lang="el">ΕΛ</li>
+            </ul>
+        </div>
         <div style="width: 100%; height: 1px; margin-bottom: 6px; background-color: white;"></div>
     </div>
     <div class="home">
-        <h1 class="title-text2">TERMS OF SERVICE</h1>
+        <h1 class="title-text2" data-i18n="tos.title">TERMS OF SERVICE</h1>
         <div class="expertise-div">
-            <p class="main-text">
+            <p class="main-text" data-i18n="tos.intro">
                 Welcome to Lazaros Bourantas's website. By accessing or using this website, you agree to be bound by
                 these Terms of Service.
             </p>
-            <h3 class="subtitle-text">INTELLECTUAL PROPERTY</h3>
-            <p class="main-text">
+            <h3 class="subtitle-text" data-i18n="tos.ip.title">INTELLECTUAL PROPERTY</h3>
+            <p class="main-text" data-i18n="tos.ip.p">
                 All content, design, graphics, and other materials on this website are the intellectual property of
                 Lazaros Bourantas unless otherwise noted. Unauthorized use or reproduction is strictly prohibited.
             </p>
-            <h3 class="subtitle-text">DISCLAIMER</h3>
-            <p class="main-text">
+            <h3 class="subtitle-text" data-i18n="tos.disclaimer.title">DISCLAIMER</h3>
+            <p class="main-text" data-i18n="tos.disclaimer.p">
                 The content provided on this website is for informational purposes only. We make no representations or
                 warranties of any kind regarding the accuracy, completeness, or suitability of the information.
             </p>
-            <h3 class="subtitle-text">CHANGES TO TERMS</h3>
-            <p class="main-text">
+            <h3 class="subtitle-text" data-i18n="tos.changes.title">CHANGES TO TERMS</h3>
+            <p class="main-text" data-i18n="tos.changes.p">
                 We reserve the right to modify these Terms of Service at any time. Any changes will be posted on this
                 page.
             </p>
-            <a style="width: 100%;" href="index.html"><button style="width: 100%;" class="cv-button">BACK TO
+            <a style="width: 100%;" href="index.html"><button style="width: 100%;" class="cv-button" data-i18n="tos.back">BACK TO
                     HOME</button></a>
         </div>
     </div>
@@ -70,32 +81,28 @@
                 onmouseout="this.style.opacity='0.6'; this.style.transform='scale(1)';">
                 <img style="height: 100%; object-fit: contain;" src="icons/lm.webp" alt="Lazaros Bourantas Logo">
             </a>
-            <p class="main-text"
-                style="text-align: center; max-width: 400px; margin: 0 auto; font-size: clamp(14px, 1.2vw, 16px); opacity: 0.8;">
-                Designing, developing, and engineering premium digital experiences.
-            </p>
         </div>
 
         <div style="display: flex; justify-content: center; gap: 40px; margin-top: 30px; flex-wrap: wrap;">
             <a class="promo-text" href="#contact"
                 style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
                 onmouseover="this.style.color='var(--white)';"
-                onmouseout="this.style.color='var(--secondary-color2)';">Contact</a>
+                onmouseout="this.style.color='var(--secondary-color2)';" data-i18n="footer.contact">Contact</a>
             <a class="promo-text" href="privacy.html"
                 style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
                 onmouseover="this.style.color='var(--white)';"
-                onmouseout="this.style.color='var(--secondary-color2)';">Privacy Policy</a>
+                onmouseout="this.style.color='var(--secondary-color2)';" data-i18n="footer.privacy">Privacy Policy</a>
             <a class="promo-text" href="termsofservice.html"
                 style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
                 onmouseover="this.style.color='var(--white)';"
-                onmouseout="this.style.color='var(--secondary-color2)';">Terms of Service</a>
+                onmouseout="this.style.color='var(--secondary-color2)';" data-i18n="footer.terms">Terms of Service</a>
         </div>
 
         <div
             style="width: 60%; height: 1px; background: linear-gradient(to right, transparent, var(--secondary-color), transparent); margin: 30px auto 10px;">
         </div>
 
-        <p class="promo-text" style="font-size: clamp(11px, 0.9vw, 14px); opacity: 0.6; letter-spacing: 1px;">© 2024
+        <p class="promo-text" style="font-size: clamp(11px, 0.9vw, 14px); opacity: 0.6; letter-spacing: 1px;" data-i18n="footer.copyright">© 2024
             LAZAROS BOURANTAS. ALL
             RIGHTS RESERVED.</p>
     </footer>
@@ -115,6 +122,12 @@
             }
         });
     </script>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-glow"></div>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/lang.js"></script>
 </body>
 
 </html>

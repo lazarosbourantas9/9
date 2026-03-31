@@ -1,61 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRESENTATION OF "Oiko Worth Living" WEBSITE | Lazaros Bourantas</title>
-    <link href="/Fonts/OldEnglishFive-axyVg.woff2" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../icons/lm.webp">
-    <link rel="stylesheet" href="../styles/styles.css">  
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
+
 <body>
     <div class="header">
-        <a class="noSelect hidden" href="../index.html" style=" cursor: pointer; height: 45%; margin: auto; "> <img style="height: 100%; object-fit: fill; margin: auto;" src="../icons/lm.webp"></a>
-        <div style="width: 100%; height: 1px; margin-bottom: 6px; background-color: white;"></div>          
+        <a class="noSelect hidden" href="../index.html"
+            style="cursor: pointer; height: 45%; margin: auto; transition: transform 0.3s ease;"
+            onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';"> <img
+                style="height: 100%; object-fit: fill; margin: auto;" src="../icons/lm.webp"></a>
+        <div class="lang-dropdown noSelect" id="lang-dropdown">
+            <button class="lang-btn" id="lang-toggle">
+                <span id="lang-current">ΕΛ</span>
+                <span class="lang-arrow">▾</span>
+            </button>
+            <ul class="lang-menu" id="lang-menu">
+                <li data-lang="en">EN</li>
+                <li data-lang="el">ΕΛ</li>
+            </ul>
+        </div>
+        <div style="width: 100%; height: 1px; margin-bottom: 6px; background-color: white;"></div>
     </div>
     <div class="home hidden" id="home">
-        <p class="title-text2">PRESENTATION OF "Oiko Worth Living" WEBSITE</p>
-        <p class="subtitle-text">Minimal website providing information about the "Oiko Worth Living" apartment in Ioannina, Greece.</p>
-        <p class="main-text">Minimal and easy-to-navigate website design, presenting the "Oiko Worth Living" apartment in Ioannina, Greece. The design aims to help the visitors find easily every piece of information they need, inside a beautiful web page. The inforamtion displayed about the appartment include high quality pictures, the appartment's facilities, booking information and navigation instructions. The colors used in the design are soft and warm in order to match the appartment's atmosphere and create a final image that inspires homogeneity and harmony.</p>        
-        <div style="margin-top: 90px; border: 1.5px solid rgb(192, 192, 192); outline: none;" class="news-div"></div>
+        <p class="title-text3" data-i18n="oiko.page.title">PRESENTATION OF "Oiko Worth Living" WEBSITE</p>
+        <p class="subtitle-text" data-i18n="oiko.page.subtitle">Minimal website design, providing information about the "Oiko Worth Living" apartment
+            in
+            Ioannina, Greece.</p>
+        <div style="margin-top: 30px; border: 1.5px solid rgb(192, 192, 192); outline: none;" class="news-div"></div>
         <div class="collage">
             <div class="collage-container">
                 <div class="column">
                     <div class="photo"><img src="../MoreImages/oikoworthliving/oikoworthliving (1).jpg" alt=""></div>
                 </div>
                 <div class="column">
-                    <div class="photo" ><img loading="lazy" src="../MoreImages/oikoworthliving/oikoworthliving (3).jpg" alt=""></div>
+                    <div class="photo"><img loading="lazy" src="../MoreImages/oikoworthliving/oikoworthliving (3).jpg"
+                            alt=""></div>
                 </div>
                 <div class="column">
-                    <div class="photo"><img loading="lazy" src="../MoreImages/oikoworthliving/oikoworthliving (4).jpg" alt=""></div>
-                    
+                    <div class="photo"><img loading="lazy" src="../MoreImages/oikoworthliving/oikoworthliving (4).jpg"
+                            alt=""></div>
                 </div>
             </div>
         </div>
         <div style=" border: 1.5px solid rgb(192, 192, 192); outline: none;" class="news-div"></div>
+        <p class=”main-text” data-i18n=”oiko.page.desc”>Minimal and easy-to-navigate website design, presenting the “Oiko Worth Living” apartment
+            in Ioannina, Greece, with a strong emphasis on clarity, structure, and user experience. The layout follows a
+            clean and intuitive hierarchy, guiding visitors through the content with clearly defined sections and a
+            simple top navigation menu that allows instant access to the apartment overview, facilities, location, and
+            contact information.
+
+            The design considers usability as a primary goal, ensuring that information is presented in a logical and
+            digestible manner. Content is well-spaced, with generous white space that improves readability and prevents
+            visual overload. Headings and typographic contrast are used effectively to highlight key information, making
+            the browsing experience smooth and effortless across all sections of the website.
+
+            High-quality images are seamlessly integrated into the layout, not only as visual elements but as functional
+            components that support the storytelling of the apartment. The image grid and full-width sections create
+            visual rhythm and maintain user engagement, while the consistent alignment reinforces a sense of order and
+            professionalism.
+
+            The color palette is composed of soft, warm, and neutral tones that contribute to a calm and refined
+            interface, enhancing visual comfort and reinforcing the apartment’s identity. Subtle design details, such as
+            rounded elements, icon-based facility indicators, and balanced spacing, add to the modern aesthetic without
+            distracting from the content.
+
+            Overall, the website design achieves a harmonious balance between aesthetics and functionality, delivering a
+            cohesive digital experience that feels intuitive, elegant, and user-centered. The result is a visually
+            consistent and accessible web interface that allows visitors to easily explore the apartment while enjoying
+            a calm and well-structured online environment.</p>
         <div class="icon-container" style="margin-bottom: 0px;">
-            <div class="icon-div" title="lazarosbourantas9@gmail.com" onclick="copyToClipboard(event, 'lazarosbourantas9@gmail.com')">
-                <p class="subtitle-text" style="margin: 0px; text-align: center; padding: 0px;">For business inquiries, contact:</p>
+            <div class="icon-div" title="lazarosbourantas9@gmail.com"
+                onclick="copyToClipboard(event, 'lazarosbourantas9@gmail.com')">
+                <p class="subtitle-text" style="margin: 0px; text-align: center; padding: 0px;" data-i18n="contact.inquiry">For business inquiries,
+                    contact:</p>
                 <p class="promo-text hidden" style="margin-top: 1.2vw;">lazarosbourantas9@gmail.com</p>
             </div>
             <div style="display: flex;">
-                <a class="icon-div" href="https://www.instagram.com/lazarosbourantas/" target="_blank" title="@lazarosbourantas">
+                <a class="icon-div" href="https://www.instagram.com/lazarosbourantas/" target="_blank"
+                    title="@lazarosbourantas">
                     <img loading="lazy" src="../icons/iglogo.svg" alt="Instagram Icon">
                 </a>
-                <a class="icon-div" href="https://www.linkedin.com/in/lazarosbourantas/" target="_blank" title="@lazarosbourantas">
+                <a class="icon-div" href="https://www.linkedin.com/in/lazarosbourantas/" target="_blank"
+                    title="@lazarosbourantas">
                     <img loading="lazy" src="../icons/linlogo.svg" alt="LinkedIn Icon">
                 </a>
-                <a class="icon-div" href="https://www.youtube.com/@LazarosBourantas" target="_blank" title="@lazarosbourantas">
+                <a class="icon-div" href="https://www.youtube.com/@LazarosBourantas" target="_blank"
+                    title="@lazarosbourantas">
                     <img loading="lazy" src="../icons/youtubelogo.svg" alt="Youtube Icon">
                 </a>
             </div>
         </div>
     </div>
-    <div class="bottom-header">  
-        <a class="noSelect hidden" href="/index.html" style=" cursor: pointer; height: 21%; margin: auto; opacity: 0.3;"> <img style="height: 100%; object-fit: fill;" src="../icons/lm.webp"></a>
-        <p class="promo-text">Cookies | Policy</p>     
-        <p class="promo-text">© 2024 LAZAROS BOURANTAS, All Rights Reserved.</p>
-    </div>
-    <script src="../scripts/app.js"></script> 
+    <footer class="bottom-header"
+        style="box-sizing: border-box; height: auto; padding: 60px 20px 30px; text-align: center; gap: 25px;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+            <a class="noSelect" href="../index.html"
+                style="cursor: pointer; height: 90px; opacity: 0.6; transition: all 0.3s ease;"
+                onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';"
+                onmouseout="this.style.opacity='0.6'; this.style.transform='scale(1)';">
+                <img style="height: 100%; object-fit: contain;" src="../icons/lm.webp" alt="Lazaros Bourantas Logo">
+            </a>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 40px; margin-top: 90px; flex-wrap: wrap;">
+            <a class="promo-text" href="../index.html#contact"
+                style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
+                onmouseover="this.style.color='var(--white)';"
+                onmouseout="this.style.color='var(--secondary-color2)';" data-i18n="footer.contact">Contact</a>
+            <a class="promo-text" href="../privacy.html"
+                style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
+                onmouseover="this.style.color='var(--white)';"
+                onmouseout="this.style.color='var(--secondary-color2)';" data-i18n="footer.privacy">Privacy Policy</a>
+            <a class="promo-text" href="../termsofservice.html"
+                style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
+                onmouseover="this.style.color='var(--white)';"
+                onmouseout="this.style.color='var(--secondary-color2)';" data-i18n="footer.terms">Terms of Service</a>
+        </div>
+
+        <div
+            style="width: 60%; height: 1px; background: linear-gradient(to right, transparent, var(--secondary-color), transparent); margin: 15px auto 10px;">
+        </div>
+
+        <p class="promo-text" style="font-size: clamp(9px, 0.9vw, 14px); opacity: 0.6; letter-spacing: 1px;" data-i18n="footer.copyright">© 2024
+            LAZAROS BOURANTAS. ALL
+            RIGHTS RESERVED.</p>
+    </footer>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-glow"></div>
+
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/lang.js"></script>
 </body>
+
 </html>

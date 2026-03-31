@@ -15,17 +15,27 @@
             style="cursor: pointer; height: 45%; margin: auto; transition: transform 0.3s ease;"
             onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';"> <img
                 style="height: 100%; object-fit: fill;" src="icons/lm.webp"></a>
+        <div class="lang-dropdown noSelect" id="lang-dropdown">
+            <button class="lang-btn" id="lang-toggle">
+                <span id="lang-current">ΕΛ</span>
+                <span class="lang-arrow">▾</span>
+            </button>
+            <ul class="lang-menu" id="lang-menu">
+                <li data-lang="en">EN</li>
+                <li data-lang="el">ΕΛ</li>
+            </ul>
+        </div>
         <div style="width: 100%; height: 1px; margin-bottom: 6px; background-color: white;"></div>
     </div>
     <nav class="page-navbar noSelect">
         <p class="subtitle-text hero-nav-links" style="margin: 0; letter-spacing: 3px;">
-            <a href="#latest" class="nav-scroll noSelect">LATEST</a>
+            <a href="#latest" class="nav-scroll noSelect" data-i18n="nav.latest">LATEST</a>
             &nbsp;|&nbsp;
-            <a href="#services" class="nav-scroll noSelect">SERVICES</a>
+            <a href="#services" class="nav-scroll noSelect" data-i18n="nav.services">SERVICES</a>
             &nbsp;|&nbsp;
-            <a href="#cv" class="nav-scroll noSelect">C.V.</a>
+            <a href="#cv" class="nav-scroll noSelect" data-i18n="nav.cv">C.V.</a>
             &nbsp;|&nbsp;
-            <a href="#contact" class="nav-scroll noSelect">CONTACT</a>
+            <a href="#contact" class="nav-scroll noSelect" data-i18n="nav.contact">CONTACT</a>
         </p>
     </nav>
     <div class="collage2">
@@ -51,30 +61,33 @@
         </div>
     </div>
     <div class="home hidden" id="home">
-        <p class="title-text2" id="latest">
+        <p class="title-text2" id="latest" data-i18n="section.latest">
             LATEST
         </p>
         <a href="https://lazarosbourantas9.github.io/MetronHub/" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/MetronHub.svg" alt="">
             <div>
                 <p class="subtitle-text">METRON HUB</p>
-                <p class="main-text">Applications I have developed, for your daily tracking and progress visualisation,
+                <p class="main-text" data-i18n="metronhub.text">Applications I have developed, for your daily tracking
+                    and progress visualisation,
                     on your browser.</p>
             </div>
         </a>
         <a href="MorePages/oikoworthliving.html" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/oikoworthliving/oikoworthliving (5).jpg" alt="">
             <div>
-                <p class="subtitle-text">PRESENTATION OF "Oiko Worth Living" WEBSITE</p>
-                <p class="main-text">Minimal website providing information about the "Oiko Worth Living" apartment in
+                <p class="subtitle-text" data-i18n="oiko.subtitle">PRESENTATION OF "Oiko Worth Living" WEBSITE</p>
+                <p class="main-text" data-i18n="oiko.text">Minimal website providing information about the "Oiko Worth
+                    Living" apartment in
                     Ioannina, Greece.</p>
             </div>
         </a>
         <a href="MorePages/karystosecret.html" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/karystosecret/1.jpg" alt="">
             <div>
-                <p class="subtitle-text">PRESENTATION OF "KARYSTOSECRET.GR" WEBSITE</p>
-                <p class="main-text">Showcasing the beauty of Karystos, Evia, with easy navigation and nature-inspired
+                <p class="subtitle-text" data-i18n="karystos.subtitle">PRESENTATION OF "KARYSTOSECRET.GR" WEBSITE</p>
+                <p class="main-text" data-i18n="karystos.text">Showcasing the beauty of Karystos, Evia, with easy
+                    navigation and nature-inspired
                     design.</p>
             </div>
         </a>
@@ -82,56 +95,58 @@
             <img loading="lazy" class="latest-image" src="MoreImages/joyfy.png" alt="">
             <div>
                 <p class="subtitle-text">JOYFY</p>
-                <p class="main-text">Instant browser games — no downloads, no installs, just pure fun.</p>
+                <p class="main-text" data-i18n="joyfy.text">Instant browser games — no downloads, no installs, just pure
+                    fun.</p>
             </div>
         </a>
-        <p class="title-text2" id="services">
+        <p class="title-text2" id="services" data-i18n="section.services">
             SERVICES
         </p>
-        <p class="main-text" style="text-align: center; margin-top: 30px; margin-bottom: 15px;">COMPUTER ENGINEERING
+        <p class="main-text" style="text-align: center; margin-top: 30px; margin-bottom: 15px;"
+            data-i18n="services.intro">COMPUTER ENGINEERING
             EXPERTISE AND SERVICES:</p>
         <div class="expertise-div noSelect hidden2">
             <div class="expertise-header">
-                <p class="subtitle-text">WEBSITE DESIGN & DEVELOPMENT</p>
+                <p class="subtitle-text" data-i18n="web.title">WEBSITE DESIGN & DEVELOPMENT</p>
                 <span class="arrow">▼</span>
             </div>
 
             <div class="expertise-content">
-                <p class="main-text">
+                <p class="main-text" data-i18n="web.desc">
                     Custom-built, responsive websites designed for performance, usability, and a seamless experience
                     across all devices.
                 </p>
                 <ul>
-                    <li>Modern, mobile-friendly and fast-loading designs</li>
-                    <li>Business, personal, and portfolio website development</li>
-                    <li>UI/UX design focused on usability and user behavior</li>
-                    <li>Domain, hosting, and deployment setup</li>
-                    <li>Maintenance and ongoing technical support</li>
-                    <li>SEO-ready structure that boosts visibility and credibility</li>
-                    <li>Analytics integration for visitor insights and performance optimization</li>
+                    <li data-i18n="web.li1">Modern, mobile-friendly and fast-loading designs</li>
+                    <li data-i18n="web.li2">Business, personal, and portfolio website development</li>
+                    <li data-i18n="web.li3">UI/UX design focused on usability and user behavior</li>
+                    <li data-i18n="web.li4">Domain, hosting, and deployment setup</li>
+                    <li data-i18n="web.li5">Maintenance and ongoing technical support</li>
+                    <li data-i18n="web.li6">SEO-ready structure that boosts visibility and credibility</li>
+                    <li data-i18n="web.li7">Analytics integration for visitor insights and performance optimization</li>
                 </ul>
             </div>
         </div>
         <div class="expertise-div noSelect hidden2">
             <div class="expertise-header">
-                <p class="subtitle-text">
+                <p class="subtitle-text" data-i18n="software.title">
                     SOFTWARE SOLUTIONS – APPLICATION DEVELOPMENT, DATA SYSTEMS & AUTOMATION ENGINEERING
                 </p>
                 <span class="arrow">▼</span>
             </div>
             <div class="expertise-content">
-                <p class="main-text">
+                <p class="main-text" data-i18n="software.p1">
                     I create custom applications that are reliable, scalable, and intuitive. My work includes
                     cross-platform solutions,
                     API and third-party integrations, scheduled automation, and custom dashboards for real-time
                     insights.
                 </p>
-                <p class="main-text">
+                <p class="main-text" data-i18n="software.p2">
                     I design, optimize, and maintain SQL and NoSQL databases, covering architecture, normalization,
                     backups,
                     migrations, performance tuning, and security enforcement.
                 </p>
-                <p class="main-text">
+                <p class="main-text" data-i18n="software.p3">
                     I build automation systems that reduce manual work, prevent errors, and improve productivity —
                     including data
                     processing, reporting, notification workflows, web scraping, API-driven tasks, and intelligent
@@ -141,31 +156,34 @@
         </div>
         <div class="expertise-div noSelect hidden2 repair-bg">
             <div class="expertise-header">
-                <p class="subtitle-text">DEVICE REPAIR, DIAGNOSTICS & UPGRADES</p>
+                <p class="subtitle-text" data-i18n="repair.title">DEVICE REPAIR, DIAGNOSTICS & UPGRADES</p>
                 <span class="arrow">▼</span>
             </div>
             <div class="expertise-content">
-                <p class="main-text">
+                <p class="main-text" data-i18n="repair.desc">
                     Repairs and upgrades for PCs, laptops, and smartphones — including custom builds and component-level
                     service.
                 </p>
                 <ul>
-                    <li>Battery replacements</li>
-                    <li>Cracked screen replacements</li>
-                    <li>Back glass replacements</li>
-                    <li>Camera, flash, and microphone repairs</li>
-                    <li>Custom-built PCs and hardware troubleshooting</li>
-                    <li>Laptop repairs and performance upgrades (RAM, SSD, thermal paste, etc.)</li>
+                    <li data-i18n="repair.li1">Battery replacements</li>
+                    <li data-i18n="repair.li2">Cracked screen replacements</li>
+                    <li data-i18n="repair.li3">Back glass replacements</li>
+                    <li data-i18n="repair.li4">Camera, flash, and microphone repairs</li>
+                    <li data-i18n="repair.li5">Custom-built PCs and hardware troubleshooting</li>
+                    <li data-i18n="repair.li6">Laptop repairs and performance upgrades (RAM, SSD, thermal paste, etc.)
+                    </li>
                 </ul>
             </div>
         </div>
-        <div id="cv" class="icon-container noSelect" style="height: auto; padding-top: 60px; padding-bottom: 60px;">
+        <div id="cv" class="icon-container noSelect" style="height: auto; padding-top: 60px; padding-bottom: 60px; padding-left: 15px; padding-right: 15px;">
             <div style="width: 90%; text-align: center;">
-                <p class="title-text" style="text-align: center; margin-bottom: 15px; margin-top: 0px;">CURRICULUM VITAE
+                <p class="title-text" style="text-align: center; margin-bottom: 15px; margin-top: 0px;"
+                    data-i18n="cv.title">CURRICULUM VITAE
                 </p>
-                <p class="subtitle-text hidden" style="text-align: center; margin-top: 0px;">REVISED: 2/2025</p>
+                <p class="subtitle-text hidden" style="text-align: center; margin-top: 0px;" data-i18n="cv.revised">
+                    REVISED: 2/2025</p>
                 <a href="CV_LazarosBourantas_EN.pdf" download style="text-decoration: none;">
-                    <button class="cv-button" style="cursor: pointer;">
+                    <button class="cv-button" style="cursor: pointer;" data-i18n="cv.button">
                         DOWNLOAD C.V.
                     </button>
                 </a>
@@ -173,15 +191,17 @@
         </div>
         <div class="icon-container"
             style="border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; margin-bottom: 0px; height: auto; padding-top: 60px; padding-bottom: 60px;">
-            <p class="title-text" style="text-align: center; margin-bottom: 15px; margin-top: 0px;">NEWSLETTER</p>
-            <p class="main-text" style="text-align: center;">
+            <p class="title-text" style="text-align: center; margin-bottom: 15px; margin-top: 0px;"
+                data-i18n="newsletter.title">NEWSLETTER</p>
+            <p class="main-text" style="text-align: center;" data-i18n="newsletter.text">
                 Stay updated with my latest projects, releases, and announcements.
             </p>
             <form action="subscribe.php" method="POST"
                 style="display:flex; flex-direction:column; align-items:center; gap:10px; width:100%;">
                 <input type="email" name="email" required placeholder="Enter your email"
+                    data-i18n-placeholder="newsletter.placeholder"
                     style="width: 70%; max-width: 400px; padding: 12px; border-radius: 6px; border:none;">
-                <button type="submit" class="cv-button">
+                <button type="submit" class="cv-button" data-i18n="newsletter.button">
                     SUBSCRIBE
                 </button>
             </form>
@@ -190,7 +210,8 @@
             style="border-top-right-radius: 0px; border-top-left-radius:0px; margin-top: 0px;">
             <div class="icon-div" title="lazarosbourantas9@gmail.com"
                 onclick="copyToClipboard(event, 'lazarosbourantas9@gmail.com')">
-                <p class="subtitle-text" style="margin: 0px; text-align: center; padding: 0px;">For business inquiries,
+                <p class="subtitle-text" style="margin: 0px; text-align: center; padding: 0px;"
+                    data-i18n="contact.inquiry">For business inquiries,
                     contact:</p>
                 <p class="main-text hidden" style="margin-top: 1.2vw; text-align: center;">lazarosbourantas9@gmail.com
                 </p>
@@ -225,23 +246,24 @@
         <div style="display: flex; justify-content: center; gap: 40px; margin-top: 90px; flex-wrap: wrap;">
             <a class="promo-text" href="#contact"
                 style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
-                onmouseover="this.style.color='var(--white)';"
-                onmouseout="this.style.color='var(--secondary-color2)';">Contact</a>
+                onmouseover="this.style.color='var(--white)';" onmouseout="this.style.color='var(--secondary-color2)';"
+                data-i18n="footer.contact">Contact</a>
             <a class="promo-text" href="privacy.html"
                 style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
-                onmouseover="this.style.color='var(--white)';"
-                onmouseout="this.style.color='var(--secondary-color2)';">Privacy Policy</a>
+                onmouseover="this.style.color='var(--white)';" onmouseout="this.style.color='var(--secondary-color2)';"
+                data-i18n="footer.privacy">Privacy Policy</a>
             <a class="promo-text" href="termsofservice.html"
                 style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
-                onmouseover="this.style.color='var(--white)';"
-                onmouseout="this.style.color='var(--secondary-color2)';">Terms of Service</a>
+                onmouseover="this.style.color='var(--white)';" onmouseout="this.style.color='var(--secondary-color2)';"
+                data-i18n="footer.terms">Terms of Service</a>
         </div>
 
         <div
             style="width: 60%; height: 1px; background: linear-gradient(to right, transparent, var(--secondary-color), transparent); margin: 15px auto 10px;">
         </div>
 
-        <p class="promo-text" style="font-size: clamp(9px, 0.9vw, 14px); opacity: 0.6; letter-spacing: 1px;">© 2024
+        <p class="promo-text" style="font-size: clamp(9px, 0.9vw, 14px); opacity: 0.6; letter-spacing: 1px;"
+            data-i18n="footer.copyright">© 2024
             LAZAROS BOURANTAS. ALL
             RIGHTS RESERVED.</p>
     </footer>
@@ -275,6 +297,7 @@
         });
     </script>
     <script src="scripts/app.js"></script>
+    <script src="scripts/lang.js"></script>
 </body>
 
 </html>
