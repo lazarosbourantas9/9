@@ -246,7 +246,7 @@ body {
 .subtitle-text {
     font-weight: 400;
     margin-left: 6px;
-    font-size: 1.05vw;
+    font-size: 1vw;
     text-align: start;
     color: var(--white);
     letter-spacing: 1.2px;
@@ -277,7 +277,7 @@ body {
 
 
 .nav-scroll {
-    font-size: 1.1vw;
+    font-size: 0.9vw;
     color: var(--black);
     font-weight: bolder;
     letter-spacing: 0.9px;
@@ -424,14 +424,14 @@ li {
     background-size: cover;
     background-position: center;
 
-    border: 1px solid var(--secondary-color2);
+    border: 1px solid var(--main-color2);
     box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
     position: relative;
     border-radius: 6px;
     overflow: hidden;
 
     height: 240px;
-    padding: 45px;
+    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -450,7 +450,7 @@ li {
     object-fit: cover;
     border-radius: inherit;
     z-index: 1;
-    filter: brightness(0.5)blur(3px);
+    filter: brightness(0.7)blur(3px);
     transition: transform 0.6s ease-in-out, filter 0.6s ease-in-out;
 }
 
@@ -475,18 +475,18 @@ li {
     text-shadow: 0px 0px 12px black;
     margin-left: 30px;
     margin-right: 30px;
-    font-size: 1.8vw;
+    font-size: 1.2vw;
 }
 
 /* Hover effect */
 .news-div2:hover .latest-image {
-    filter: brightness(0.6) blur(2px);
+    filter: brightness(0.8) blur(2px);
     transform: scale(1.1);
 }
 
 .news-div2:hover {
     transform: scaleX(1.005);
-    border: 1px solid var(--main-color2);
+    border: 1px solid var(--white);
     box-shadow: 3px 3px 30px rgba(255, 255, 255, 0.1);
 }
 
@@ -527,7 +527,9 @@ li {
 .icon-container {
     margin-top: 9vh;
     margin-bottom: 30px;
-    height: 180px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 195px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -633,7 +635,7 @@ li {
     overflow: hidden;
     /* Essential for hiding the shimmer when it moves outside the bar */
     margin-top: 6px;
-    height: 45px;
+    height: 51px;
     background-image: linear-gradient(to bottom right, var(--secondary-color2), var(--white2));
     z-index: 9;
     padding: 0 12px;
@@ -801,7 +803,7 @@ li {
 }
 
 .hero-nav-links {
-    font-size: 1.5vh;
+    font-size: 1.2vh;
     position: relative;
     z-index: 3;
     text-align: center;
@@ -919,6 +921,13 @@ li {
     margin: 0;
 }
 
+@media (min-width: 801px) {
+    .hero-nav-links {
+        letter-spacing: 8px;
+        word-spacing: 21px;
+    }
+}
+
 .news-div2 {
     position: relative;
     border-radius: 9px;
@@ -982,15 +991,15 @@ li {
     }
 
     .news-div2 .subtitle-text {
-        font-size: 4.8vw;
+        font-size: 4.5vw;
     }
 
     .news-div2 .main-text {
-        font-size: 4.2vw;
+        font-size: 3.9vw;
     }
 
     .nav-scroll {
-        font-size: 2.4vw;
+        font-size: 2.6vw;
         margin: 0 2px;
         letter-spacing: 0.5px;
     }

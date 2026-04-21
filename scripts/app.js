@@ -107,7 +107,7 @@ async function copyToClipboard(event, email) {
 
 // ================= 3D TILT CARDS =================
 (function () {
-  var MAX_TILT = 3;
+  var MAX_TILT = 1;
 
   var cards = document.querySelectorAll('.news-div2, .expertise-div');
   if (!cards.length) return;
