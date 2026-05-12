@@ -110,7 +110,7 @@ body {
     transition: background 0.4s ease;
 }
 
-.header > a {
+.header>a {
     height: 55%;
     display: flex;
     align-items: center;
@@ -119,11 +119,11 @@ body {
     flex-shrink: 0;
 }
 
-.header > a:hover {
+.header>a:hover {
     transform: scale(1.08);
 }
 
-.header > a img {
+.header>a img {
     height: 100%;
     object-fit: contain;
 }
@@ -752,7 +752,7 @@ li {
     background-position: center;
     background-repeat: no-repeat;
 
-    filter: blur(2px) brightness(0.5);
+    filter: blur(1px) brightness(0.5);
     /* <-- the blur */
     transform: scale(1.1);
     /* prevents edge clipping after blur */
@@ -1237,14 +1237,12 @@ li {
     position: absolute;
     inset: 0;
     z-index: 2;
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.92) 0%,
-        rgba(0, 0, 0, 0.78) 15%,
-        rgba(0, 0, 0, 0.50) 35%,
-        rgba(0, 0, 0, 0.20) 55%,
-        transparent 75%
-    );
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.78) 15%,
+            rgba(0, 0, 0, 0.50) 35%,
+            rgba(0, 0, 0, 0.20) 55%,
+            transparent 75%);
     pointer-events: none;
 }
 
@@ -1340,9 +1338,11 @@ li {
     0% {
         left: -150%;
     }
+
     20% {
         left: 150%;
     }
+
     100% {
         left: 150%;
     }
