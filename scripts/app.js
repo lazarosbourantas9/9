@@ -19,6 +19,30 @@ function registerObserver(className, visibleClass) {
 registerObserver(".hidden", "show");
 registerObserver(".hidden2", "show2");
 
+// ================= HAMBURGER MOBILE MENU =================
+(function () {
+  var hamburger = document.getElementById('hamburger-btn');
+  var mobileMenu = document.getElementById('mobile-menu');
+  if (!hamburger || !mobileMenu) return;
+
+  hamburger.addEventListener('click', function () {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+
+  // Close menu when a nav link is clicked
+  var links = mobileMenu.querySelectorAll('.mobile-nav-link');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function () {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  }
+})();
+
 async function copyToClipboard(event, email) {
   event.preventDefault();
   try {

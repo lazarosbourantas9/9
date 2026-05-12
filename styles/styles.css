@@ -25,8 +25,16 @@
 }
 
 @font-face {
-    font-family: "Old";
-    src: url("../Fonts/BellynaTuberosDemo-Regular.ttf") format("truetype");
+    font-family: "Playfair Display";
+    src: url("../Fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../Fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -43,13 +51,13 @@ html {
 
 p,
 li {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 a {
     color: var(--main-color);
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 img {
@@ -76,38 +84,177 @@ div {
 
 body {
     margin: auto;
-    margin-top: 90px;
+    margin-top: 70px;
     background-image: linear-gradient(to bottom right, var(--black2), var(--black3));
     align-items: center;
     overflow-x: hidden;
 }
 
+/* ================= SINGLE GLASSMORPHISM HEADER ================= */
 .header {
-    height: 90px;
+    height: 70px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    background: var(--white);
+    padding: 0 clamp(20px, 4vw, 50px);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.75);
-    /* adjust opacity as needed */
-    backdrop-filter: blur(21px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 3px solid var(--white);
-    z-index: 10;
-    box-shadow: 0 9px 15px rgba(255, 255, 255, 0.12);
-    transition: backdrop-filter 0.3s ease, background 0.3s ease;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 100;
+    transition: background 0.4s ease;
+}
+
+.header > a {
+    height: 55%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.header > a:hover {
+    transform: scale(1.08);
+}
+
+.header > a img {
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ---- Inline Nav Links (desktop) ---- */
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, 3vw, 42px);
+}
+
+.nav-link {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(0.65rem, 0.85vw, 0.9rem);
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    padding: 4px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--white);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--white);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ---- Header Right Group ---- */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
 }
 
 .lang-dropdown {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-60%);
-    z-index: 11;
+    position: relative;
+    z-index: 101;
+}
+
+/* ---- Hamburger Button (mobile only) ---- */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 101;
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger-btn.active span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-btn.active span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* ---- Full-Screen Mobile Menu ---- */
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.mobile-menu.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-menu-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+}
+
+.mobile-nav-link {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.6rem, 5vw, 2.8rem);
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+    color: var(--white);
+    letter-spacing: 0.25em;
 }
 
 .lang-btn {
@@ -117,7 +264,7 @@ body {
     background: none;
     border: 1.5px solid var(--main-color2);
     color: var(--main-color);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 1.5px;
@@ -164,7 +311,7 @@ body {
 
 .lang-menu li {
     padding: 7px 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 1.5px;
@@ -187,15 +334,206 @@ body {
 
 .bottom-header {
     margin-top: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-width: 100%;
-    height: 300px;
     background-color: var(--black);
     backdrop-filter: blur(3px);
-    border-top: 9px solid var(--black4);
-    filter: brightness(120%);
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 80px 0 40px;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+/* Greek architecture double-line — top edge only */
+.bottom-header::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.25);
+    pointer-events: none;
+}
+
+.footer-container {
+    width: 82%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-logo {
+    height: 60px;
+    display: block;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.footer-logo img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.footer-tagline {
+    font-size: 0.95vw;
+    color: var(--main-color2);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer-column h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4vw;
+    color: var(--white);
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-column ul li {
+    font-size: 0.95vw;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    color: var(--main-color2);
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: inline-block;
+}
+
+.footer-column ul li a:hover {
+    color: var(--white);
+    padding-left: 5px;
+}
+
+.contact-links li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-bottom {
+    width: 82%;
+    margin: 60px auto 0;
+}
+
+.footer-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--secondary-color), transparent);
+    margin-bottom: 25px;
+}
+
+.footer-legal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.copyright {
+    font-size: 0.85vw;
+    color: var(--secondary-color2);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.legal-links {
+    display: flex;
+    gap: 30px;
+}
+
+.legal-links a {
+    font-size: 0.85vw;
+    color: var(--secondary-color2);
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: var(--white);
+}
+
+@media (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .footer-column h4 {
+        font-size: 1.8vw;
+    }
+
+    .footer-tagline,
+    .footer-column ul li,
+    .copyright,
+    .legal-links a {
+        font-size: 1.4vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .bottom-header {
+        padding: 60px 0 30px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 35px;
+        width: 85%;
+    }
+
+    .footer-column {
+        width: 100%;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .footer-column h4 {
+        font-size: 18px;
+    }
+
+    .footer-tagline,
+    .footer-column ul li,
+    .copyright,
+    .legal-links a {
+        font-size: 14px;
+    }
+
+    .footer-legal {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .legal-links {
+        flex-direction: column;
+        gap: 12px;
+    }
 }
 
 .home {
@@ -206,33 +544,61 @@ body {
     padding-top: 0px;
 }
 
+/* ================= SECTION DIVIDERS ================= */
+.section-divider {
+    width: 50%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent);
+    margin: 100px auto 0;
+}
+
+/* ================= TITLE ACCENT ================= */
+.title-accent {
+    display: block;
+    width: 40px;
+    height: 2px;
+    margin: 0 auto 30px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
+    border-radius: 2px;
+}
+
 .title-text {
-    font-family: "Old";
+    font-family: "Playfair Display", serif;
     margin: 11vw;
     margin-bottom: 21px;
     text-align: center;
     font-size: 3vw;
     color: var(--white);
     font-weight: bolder;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.1em;
     transform: scaleY(1.1);
 }
 
 .title-text2 {
-    font-family: "Old";
+    font-family: "Playfair Display", serif;
     margin: 6vh;
     margin-top: 7.5vh;
-    margin-bottom: 3vh;
+    margin-bottom: 1.5vh;
     text-align: center;
     font-size: 3vw;
     color: var(--white);
     font-weight: bolder;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.1em;
     transform: scaleY(1.1);
 }
 
+/* Services intro text */
+.services-intro {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0.75;
+    letter-spacing: 0.15em;
+    font-size: 1vw;
+}
+
 .title-text3 {
-    font-family: "Old";
+    font-family: "Playfair Display", serif;
     margin: 3.9vh;
     margin-bottom: 4.5vh;
     text-align: center;
@@ -246,11 +612,9 @@ body {
 .subtitle-text {
     font-weight: 400;
     margin-left: 6px;
-    font-size: 1vw;
+    font-size: 1.2vw;
     text-align: start;
     color: var(--white);
-    letter-spacing: 1.2px;
-    transform: scaleY(1.3);
     font-weight: bold;
     margin-bottom: 3px;
 }
@@ -263,7 +627,6 @@ body {
     font-size: 1.2vw;
     color: var(--main-color);
     filter: brightness(0.9);
-    letter-spacing: 0px;
 }
 
 .promo-text {
@@ -276,13 +639,6 @@ body {
 }
 
 
-.nav-scroll {
-    font-size: 0.9vw;
-    color: var(--black);
-    font-weight: bolder;
-    letter-spacing: 0.9px;
-    margin: 0 12px;
-}
 
 li {
     text-align: center;
@@ -295,21 +651,25 @@ li {
     filter: brightness(0.9);
 }
 
-/* ================= EXPERTISE CARD ================= */
+/* ================= EXPERTISE CARD (GLASSMORPHISM) ================= */
 .expertise-div {
-    background-image: linear-gradient(to bottom right, var(--black4), var(--secondary-color));
-    border: 1px solid var(--black);
-    box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.08);
-    border-radius: 9px;
-    padding: 15px;
-    padding-top: 45px;
-    padding-bottom: 45px;
-    margin-top: 6px;
-    margin-bottom: 6px;
-
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
-    /* 👈 IMPORTANT */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expertise-div:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.25);
 }
 
 /* ================= HEADER ================= */
@@ -317,7 +677,6 @@ li {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* title then arrow */
     align-items: flex-start;
     cursor: pointer;
 }
@@ -325,7 +684,7 @@ li {
 .expertise-header .subtitle-text {
     margin: auto;
     text-align: center;
-    color: var(--main-color2);
+    color: rgba(255, 255, 255, 0.55);
     transition: color 0.4s ease;
 }
 
@@ -339,8 +698,12 @@ li {
     text-align: center;
     margin-top: 15px;
     font-size: 0.9vw;
-    color: var(--main-color);
-    transition: transform 0.3s ease;
+    color: rgba(255, 255, 255, 0.4);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.expertise-div:hover .arrow {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* ================= CONTENT ================= */
@@ -348,18 +711,21 @@ li {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: max-height 0.45s ease, opacity 0.3s ease;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
 }
 
 /* ================= EXPANDED STATE ================= */
 .expertise-div.active .expertise-content {
     max-height: 1200px;
-    /* safe height */
     opacity: 1;
 }
 
 .expertise-div.active .arrow {
     transform: rotate(180deg);
+}
+
+.expertise-div.active {
+    border-color: rgba(255, 255, 255, 0.15);
 }
 
 /* ================= MOBILE ================= */
@@ -423,21 +789,19 @@ li {
     background-color: var(--black4);
     background-size: cover;
     background-position: center;
-
-    border: 1px solid var(--main-color2);
-    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
     position: relative;
-    border-radius: 6px;
+    border-radius: 12px;
     overflow: hidden;
-
     height: 240px;
     padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 /* Make the <img> become the background */
@@ -450,7 +814,7 @@ li {
     object-fit: cover;
     border-radius: inherit;
     z-index: 1;
-    filter: brightness(0.7)blur(3px);
+    filter: brightness(0.8) blur(4px);
     transition: transform 0.6s ease-in-out, filter 0.6s ease-in-out;
 }
 
@@ -472,22 +836,21 @@ li {
     margin-left: 0 !important;
     margin-right: 0 !important;
     color: white !important;
-    text-shadow: 0px 0px 12px black;
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: 1.2vw;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
+    padding: 0 30px;
+    font-size: 1.5vw;
 }
 
 /* Hover effect */
 .news-div2:hover .latest-image {
-    filter: brightness(0.8) blur(2px);
-    transform: scale(1.1);
+    filter: brightness(1) blur(2px);
+    transform: scale(1.08);
 }
 
 .news-div2:hover {
-    transform: scaleX(1.005);
-    border: 1px solid var(--white);
-    box-shadow: 3px 3px 30px rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35), 0 0 20px rgba(255, 255, 255, 0.04);
 }
 
 .blog {
@@ -524,23 +887,89 @@ li {
     border-radius: 3px;
 }
 
+/* ================= GLASSMORPHISM CONTAINERS ================= */
 .icon-container {
     margin-top: 9vh;
     margin-bottom: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    height: 195px;
+    padding: 60px 30px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom right, var(--secondary-color), var(--main-color2));
-    border: 2px solid var(--main-color);
-    outline: 1px solid var(--main-color);
-    box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.08);
-    outline-offset: -9px;
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.icon-container .title-text {
+    margin: 0 0 15px;
+    text-align: center;
+}
+
+/* Section-specific styles */
+.cv-section {
+    text-align: center;
+}
+
+.cv-inner {
+    width: 90%;
+    text-align: center;
+}
+
+.newsletter-section {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+}
+
+.contact-section {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-top: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Newsletter form */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.newsletter-input {
+    width: 70%;
+    max-width: 400px;
+    padding: 14px 18px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: var(--white);
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    outline: none;
+    transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+    letter-spacing: 0.05em;
+}
+
+.newsletter-input:focus {
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
 .icon-div {
@@ -552,10 +981,11 @@ li {
     margin-left: 30px;
     margin-right: 30px;
     cursor: pointer;
+    transition: opacity 0.3s ease;
 }
 
 .icon-div:hover {
-    filter: brightness(1.5);
+    opacity: 0.7;
 }
 
 .icon-container a {
@@ -563,8 +993,8 @@ li {
 }
 
 .icon-container img {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
     padding: 3px;
     margin: auto;
 }
@@ -603,50 +1033,14 @@ li {
     transition: all 600ms;
 }
 
-.page-navbar::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -150%;
-    width: 30%;
-    /* Gives the streak a physical width */
-    height: 100%;
-    /* Ensures it covers the full height of the bar */
-    background: linear-gradient(to right,
-            transparent,
-            rgba(255, 255, 255, 0.9),
-            transparent);
-    transform: skewX(-25deg);
-    animation: shimmer 8s infinite;
-    /* Uses your existing @keyframes shimmer */
-    z-index: 1;
-    pointer-events: none;
-    /* Ensures the streak doesn't block clicks on your icons */
-}
-
 .social-icons a {
-    margin: 12px;
+    margin: 9px;
     display: inline-block;
 }
 
-.page-navbar {
-    position: relative;
-    /* Essential for aligning the shimmer inside */
-    overflow: hidden;
-    /* Essential for hiding the shimmer when it moves outside the bar */
-    margin-top: 6px;
-    height: 51px;
-    background-image: linear-gradient(to bottom right, var(--secondary-color2), var(--white2));
-    z-index: 9;
-    padding: 0 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .nav-icon {
-    height: 15px;
-    width: 15px;
+    height: 12px;
+    width: 12px;
     transition: transform 0.2s ease;
 }
 
@@ -654,30 +1048,39 @@ li {
     transform: scale(1.2);
 }
 
+/* ================= GLASSMORPHISM BUTTON ================= */
 .cv-button {
     width: 240px;
     height: 45px;
-    font-size: 2vh;
-    background: linear-gradient(135deg, var(--secondary-color), var(--main-color2));
-    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: clamp(0.7rem, 1.5vh, 0.9rem);
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--white);
     cursor: pointer;
-    border: none;
-    outline: rgb(255, 255, 255) solid 1.5px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50px;
     transition: all 0.3s ease;
     margin: auto;
     margin-top: 30px;
     margin-bottom: 6px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
 }
 
 .cv-button:hover {
-    background: linear-gradient(135deg, var(--white), var(--main-color));
-    color: black;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--black);
+    border-color: rgba(255, 255, 255, 0.5);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 28px rgba(255, 255, 255, 0.15);
 }
 
 @keyframes glowPulse {
@@ -802,16 +1205,6 @@ li {
     font-size: 0.9vw;
 }
 
-.hero-nav-links {
-    font-size: 1.2vh;
-    position: relative;
-    z-index: 3;
-    text-align: center;
-    margin-top: 0vh;
-    margin-left: 0px;
-}
-
-
 /* Make carousel images act as background */
 .hero-carousel {
     position: absolute;
@@ -826,46 +1219,107 @@ li {
     transition: opacity 1.5s ease-in-out;
 }
 
+/* ================= FULL-BLEED HERO ================= */
 .collage2 {
     position: relative;
-    height: 70vh;
+    height: 100vh;
     display: flex;
-    /* Aligns the overlay to the bottom of the container */
     align-items: flex-end;
     justify-content: center;
     text-align: center;
     overflow: hidden;
     background-color: var(--black);
-    /* ADJUST THIS: Increase to move overlay up, decrease to move it down */
-    padding-bottom: 6vh;
-
-    animation: glowPulse 9s ease-in-out infinite;
+    padding-bottom: 0;
 }
 
+/* Dark gradient overlay — grounds the text over the shirt area */
+.hero-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.92) 0%,
+        rgba(0, 0, 0, 0.78) 15%,
+        rgba(0, 0, 0, 0.50) 35%,
+        rgba(0, 0, 0, 0.20) 55%,
+        transparent 75%
+    );
+    pointer-events: none;
+}
 
+/* ================= HERO CONTENT ================= */
+.hero-content {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: clamp(60px, 10vh, 120px);
+    gap: 12px;
+}
 
-/* 2. Social Icons Overlay */
+.hero-name {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.6rem, 3.5vw, 3.2rem);
+    font-weight: 400;
+    color: var(--white);
+    letter-spacing: 0.2em;
+    margin: 0;
+    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
+    transform: scaleY(1.05);
+}
+
+.hero-tagline {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(0.7rem, 1.3vw, 1.1rem);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin: 0 20px;
+    text-shadow: 0 1px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ================= GLASSMORPHISM SOCIAL PILL ================= */
 .social-overlay {
     position: relative;
     z-index: 5;
+    margin-top: 28px;
+    padding: 12px 30px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow:
+        0 4px 24px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
 
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(9px);
-    border: 1px solid rgba(255, 255, 255);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+.social-overlay:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow:
+        0 6px 32px rgba(0, 0, 0, 0.25),
+        0 0 20px rgba(255, 255, 255, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
 
-    animation: fadeInUp 1s ease-out forwards, breathe 6s ease-in-out infinite;
-    overflow: hidden;
+.social-overlay .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
 }
 
 .social-overlay .social-icons a {
-    margin: 3px 18px;
-    /* remove vertical margin that was making the div too tall */
+    margin: 0 8px;
 }
 
-/* 3. The Shimmer "Looping" Effect */
+/* Shimmer on social pill */
 .social-overlay::before {
     content: "";
     position: absolute;
@@ -875,93 +1329,69 @@ li {
     height: 100%;
     background: linear-gradient(to right,
             transparent,
-            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.3),
             transparent);
     transform: skewX(-25deg);
     animation: shimmer 8s infinite;
-}
-
-/* 4. Animation Keyframes */
-@keyframes breathe {
-
-    0%,
-    100% {
-        transform: scale(1);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    50% {
-        transform: scale(1.03);
-        border: 1px solid rgba(255, 255, 255, 0.4);
-        box-shadow: 0 12px 45px 0 rgba(255, 255, 255, 0.2);
-    }
+    border-radius: inherit;
 }
 
 @keyframes shimmer {
     0% {
         left: -150%;
     }
-
     20% {
         left: 150%;
     }
-
-    /* Move across quickly */
     100% {
         left: 150%;
     }
-
-    /* Wait for the rest of the 8s */
 }
 
-/* Ensure the text inside is visible */
-.hero-nav-links {
-    position: relative;
-    z-index: 6;
-    margin: 0;
-}
-
-@media (min-width: 801px) {
-    .hero-nav-links {
-        letter-spacing: 8px;
-        word-spacing: 21px;
-    }
+.social-overlay {
+    overflow: hidden;
 }
 
 .news-div2 {
     position: relative;
-    border-radius: 9px;
+    border-radius: 12px;
     overflow: hidden;
 }
 
-/* This creates the highlight layer ON TOP of the images */
+/* Subtle highlight layer ON TOP of the images */
 .news-div2::after {
     content: "";
     position: absolute;
     inset: 0;
-    /* Stretch to fill the whole div */
     pointer-events: none;
-    /* Crucial: allows you to click the images/links underneath */
     z-index: 10;
-    /* Ensures it sits above the carousel images */
-
-    /* The "Bright Bottom-Right" Effect */
     background: linear-gradient(135deg,
-            rgba(255, 255, 255, 0) 60%,
-            rgba(255, 255, 255, 0.36) 100%);
-
-    /* Optional: Adds a bright "lip" to the bottom and right edges */
-    box-shadow: inset -2px -2px 10px rgba(255, 255, 255, 0.3);
+            rgba(255, 255, 255, 0) 65%,
+            rgba(255, 255, 255, 0.15) 100%);
+    box-shadow: inset -1px -1px 8px rgba(255, 255, 255, 0.1);
 }
 
 
 @media (max-width: 800px) {
-    .home {
-        width: 96%;
+    body {
+        margin-top: 60px;
     }
 
     .header {
-        height: 90px;
+        height: 60px;
+        padding: 0 16px;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: flex;
+    }
+
+    .home {
+        width: 95%;
     }
 
     .title-text {
@@ -984,30 +1414,27 @@ li {
         margin-right: 3%;
     }
 
-
     .subtitle-text {
-        font-size: 3.3vw;
+        font-size: 3.6vw;
         margin-bottom: 3px;
     }
 
     .news-div2 .subtitle-text {
-        font-size: 4.5vw;
+        font-size: 4.8vw;
     }
 
     .news-div2 .main-text {
         font-size: 3.9vw;
     }
 
-    .nav-scroll {
-        font-size: 2.6vw;
-        margin: 0 2px;
-        letter-spacing: 0.5px;
+    .hero-name {
+        font-size: clamp(1.2rem, 5.5vw, 2rem);
+        margin-bottom: 4px;
     }
 
-    .hero-name {
-        font-size: clamp(1rem, 1.5vh, 8rem) !important;
-        margin-top: 0px;
-        margin-bottom: 15px;
+    .hero-tagline {
+        font-size: clamp(0.55rem, 2.5vw, 0.85rem);
+        letter-spacing: 0.2em;
     }
 
     .main-text {
@@ -1049,13 +1476,58 @@ li {
     }
 
     .collage2 {
-        height: calc(40vh);
+        height: 65vh;
+    }
+
+    .hero-content {
+        padding-bottom: clamp(40px, 8vh, 80px);
+    }
+
+    .social-overlay {
+        padding: 8px 16px;
+        margin-top: 16px;
+    }
+
+    .social-overlay .social-icons a {
+        margin: 0 6px;
     }
 
     /* Hide custom cursor on mobile */
     .cursor-dot,
     .cursor-glow {
         display: none !important;
+    }
+
+    .expertise-div {
+        padding: 21px;
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .section-divider {
+        margin: 60px auto 0;
+    }
+
+    .title-accent {
+        margin-bottom: 20px;
+    }
+
+    .services-intro {
+        font-size: 3vw;
+    }
+
+    .newsletter-input {
+        width: 85%;
+        font-size: 0.85rem;
+    }
+
+    .cv-button {
+        width: 200px;
+        height: 42px;
+    }
+
+    .icon-container {
+        padding: 40px 20px;
     }
 }
 

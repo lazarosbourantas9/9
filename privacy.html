@@ -72,39 +72,62 @@
             </div>
         </div>
     </div>
-    <footer class="bottom-header"
-        style="box-sizing: border-box; height: auto; padding: 60px 20px 30px; text-align: center; gap: 25px;">
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-            <a class="noSelect" href="/index.html"
-                style="cursor: pointer; height: 70px; opacity: 0.6; transition: all 0.3s ease;"
-                onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';"
-                onmouseout="this.style.opacity='0.6'; this.style.transform='scale(1)';">
-                <img style="height: 100%; object-fit: contain;" src="icons/lm.webp" alt="Lazaros Bourantas Logo">
-            </a>
+    <footer class="bottom-header">
+        <div class="footer-container">
+            <!-- Column 1: Logo & Tagline -->
+            <div class="footer-column logo-column">
+                <a href="/index.html" class="footer-logo noSelect">
+                    <img src="icons/lm.webp" alt="Lazaros Bourantas Logo">
+                </a>
+                <p class="footer-tagline" data-i18n="footer.tagline">Designing, developing, and engineering premium digital experiences.</p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-column">
+                <h4 data-i18n="footer.about">Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#latest" data-i18n="nav.latest">LATEST</a></li>
+                    <li><a href="index.html#services" data-i18n="nav.services">SERVICES</a></li>
+                    <li><a href="index.html#cv" data-i18n="nav.cv">C.V.</a></li>
+                    <li><a href="index.html#contact" data-i18n="nav.contact">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div class="footer-column">
+                <h4 data-i18n="nav.services">Services</h4>
+                <ul>
+                    <li><a href="index.html#services" data-i18n="web.title">Website Design</a></li>
+                    <li><a href="index.html#services" data-i18n="software.title">Software Solutions</a></li>
+                    <li><a href="index.html#local-services" data-i18n="repair.title">Tech Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer-column">
+                <h4 data-i18n="footer.contact">Contact</h4>
+                <ul class="contact-links">
+                    <li><a href="mailto:lazarosbourantas9@gmail.com">lazarosbourantas9@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/lazarosbourantas/" target="_blank">
+                        <img src="icons/linlogo.svg" alt="" class="nav-icon" style="height: 14px; width: 14px;"> LinkedIn
+                    </a></li>
+                    <li><a href="https://www.instagram.com/lazarosbourantas/" target="_blank">
+                        <img src="icons/iglogo.svg" alt="" class="nav-icon" style="height: 14px; width: 14px;"> Instagram
+                    </a></li>
+                </ul>
+            </div>
         </div>
 
-        <div style="display: flex; justify-content: center; gap: 40px; margin-top: 30px; flex-wrap: wrap;">
-            <a class="promo-text" href="#contact"
-                style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
-                onmouseover="this.style.color='var(--white)';"
-                onmouseout="this.style.color='var(--secondary-color2)';" data-i18n="footer.contact">Contact</a>
-            <a class="promo-text" href="privacy.html"
-                style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
-                onmouseover="this.style.color='var(--white)';"
-                onmouseout="this.style.color='var(--secondary-color2)';" data-i18n="footer.privacy">Privacy Policy</a>
-            <a class="promo-text" href="termsofservice.html"
-                style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
-                onmouseover="this.style.color='var(--white)';"
-                onmouseout="this.style.color='var(--secondary-color2)';" data-i18n="footer.terms">Terms of Service</a>
+        <div class="footer-bottom">
+            <div class="footer-divider"></div>
+            <div class="footer-legal">
+                <p class="copyright" data-i18n="footer.copyright">© 2024 LAZAROS BOURANTAS. ALL RIGHTS RESERVED.</p>
+                <div class="legal-links">
+                    <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="termsofservice.html" data-i18n="footer.terms">Terms of Service</a>
+                </div>
+            </div>
         </div>
-
-        <div
-            style="width: 60%; height: 1px; background: linear-gradient(to right, transparent, var(--secondary-color), transparent); margin: 30px auto 10px;">
-        </div>
-
-        <p class="promo-text" style="font-size: clamp(11px, 0.9vw, 14px); opacity: 0.6; letter-spacing: 1px;" data-i18n="footer.copyright">© 2024
-            LAZAROS BOURANTAS. ALL
-            RIGHTS RESERVED.</p>
     </footer>
     <script>
         document.getElementById("shareButton").addEventListener("click", function (event) {

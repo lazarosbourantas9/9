@@ -11,59 +11,75 @@
 
 <body>
     <div class="header">
-        <a class="noSelect hidden" href="/index.html"
-            style="cursor: pointer; height: 45%; margin: auto; transition: transform 0.3s ease;"
-            onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';"> <img
-                style="height: 100%; object-fit: fill;" src="icons/lm.webp"></a>
-        <div class="lang-dropdown noSelect" id="lang-dropdown">
-            <button class="lang-btn" id="lang-toggle">
-                <span id="lang-current">ΕΛ</span>
-                <span class="lang-arrow">▾</span>
+        <a class="noSelect hidden" href="/index.html" class="header-logo">
+            <img src="icons/lm.webp" alt="Logo">
+        </a>
+        <nav class="header-nav noSelect">
+            <a href="#latest" class="nav-link" data-i18n="nav.latest">LATEST</a>
+            <a href="#services" class="nav-link" data-i18n="nav.services">SERVICES</a>
+            <a href="#cv" class="nav-link" data-i18n="nav.cv">C.V.</a>
+            <a href="#contact" class="nav-link" data-i18n="nav.contact">CONTACT</a>
+        </nav>
+        <div class="header-right">
+            <div class="lang-dropdown noSelect" id="lang-dropdown">
+                <button class="lang-btn" id="lang-toggle">
+                    <span id="lang-current">ΕΛ</span>
+                    <span class="lang-arrow">▾</span>
+                </button>
+                <ul class="lang-menu" id="lang-menu">
+                    <li data-lang="en">EN</li>
+                    <li data-lang="el">ΕΛ</li>
+                </ul>
+            </div>
+            <button class="hamburger-btn noSelect" id="hamburger-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <ul class="lang-menu" id="lang-menu">
-                <li data-lang="en">EN</li>
-                <li data-lang="el">ΕΛ</li>
-            </ul>
         </div>
-        <div style="width: 100%; height: 1px; margin-bottom: 6px; background-color: white;"></div>
     </div>
-    <nav class="page-navbar noSelect">
-        <p class="subtitle-text hero-nav-links" style="margin: 0; letter-spacing: 3px;">
-            <a href="#latest" class="nav-scroll noSelect" data-i18n="nav.latest">LATEST</a>
-            &nbsp;|&nbsp;
-            <a href="#services" class="nav-scroll noSelect" data-i18n="nav.services">SERVICES</a>
-            &nbsp;|&nbsp;
-            <a href="#cv" class="nav-scroll noSelect" data-i18n="nav.cv">C.V.</a>
-            &nbsp;|&nbsp;
-            <a href="#contact" class="nav-scroll noSelect" data-i18n="nav.contact">CONTACT</a>
-        </p>
-    </nav>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <nav class="mobile-menu-nav">
+            <a href="#latest" class="mobile-nav-link" data-i18n="nav.latest">LATEST</a>
+            <a href="#services" class="mobile-nav-link" data-i18n="nav.services">SERVICES</a>
+            <a href="#cv" class="mobile-nav-link" data-i18n="nav.cv">C.V.</a>
+            <a href="#contact" class="mobile-nav-link" data-i18n="nav.contact">CONTACT</a>
+        </nav>
+    </div>
     <div class="collage2">
         <div class="carousel-track hero-carousel">
-            <img src="icons/carousel/kk.webp">
+            <img src="icons/carousel/ok.webp">
         </div>
-        <div class="social-overlay fade-in-slide-up" style="padding: 9px 18px; width: fit-content; margin: 0 auto;">
-            <div class="social-icons" style="justify-content: center;">
-                <a href="https://www.instagram.com/lazarosbourantas/" target="_blank" title="Instagram">
-                    <img src="icons/iglogo.svg" alt="Instagram" class="nav-icon">
-                </a>
-                <a href="https://www.linkedin.com/in/lazarosbourantas/" target="_blank" title="LinkedIn">
-                    <img src="icons/linlogo.svg" alt="LinkedIn" class="nav-icon">
-                </a>
-                <a style="display: none;" href="https://www.youtube.com/@LazarosBourantas" target="_blank"
-                    title="YouTube">
-                    <img src="icons/youtubelogo.svg" alt="YouTube" class="nav-icon">
-                </a>
-                <a href="#" id="shareButton" title="Share">
-                    <img src="icons/sharesymbol.svg" alt="Share" class="nav-icon">
-                </a>
+        <div class="hero-gradient-overlay"></div>
+        <div class="hero-content fade-in-slide-up">
+            <h1 class="hero-name" data-i18n="hero.name">LAZAROS BOURANTAS</h1>
+            <p class="hero-tagline" data-i18n="hero.tagline">Software Engineer · Web Developer · Digital Craftsman</p>
+            <div class="social-overlay">
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/lazarosbourantas/" target="_blank" title="Instagram">
+                        <img src="icons/iglogo.svg" alt="Instagram" class="nav-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/lazarosbourantas/" target="_blank" title="LinkedIn">
+                        <img src="icons/linlogo.svg" alt="LinkedIn" class="nav-icon">
+                    </a>
+                    <a style="display: none;" href="https://www.youtube.com/@LazarosBourantas" target="_blank"
+                        title="YouTube">
+                        <img src="icons/youtubelogo.svg" alt="YouTube" class="nav-icon">
+                    </a>
+                    <a href="#" id="shareButton" title="Share">
+                        <img src="icons/sharesymbol.svg" alt="Share" class="nav-icon">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
     <div class="home hidden" id="home">
+        <div class="section-divider"></div>
         <p class="title-text2" id="latest" data-i18n="section.latest">
             LATEST
         </p>
+        <span class="title-accent"></span>
         <a href="https://lazarosbourantas9.github.io/MetronHub/" class="news-div2 noSelect hidden2">
             <img loading="lazy" class="latest-image" src="MoreImages/MetronHub.svg" alt="">
             <div>
@@ -71,6 +87,14 @@
                 <p class="main-text" data-i18n="metronhub.text">Applications I have developed, for your daily tracking
                     and progress visualisation,
                     on your browser.</p>
+            </div>
+        </a>
+        <a href="https://joyfy.fun" class="news-div2 noSelect hidden2">
+            <img loading="lazy" class="latest-image" src="MoreImages/joyfy.png" alt="">
+            <div>
+                <p class="subtitle-text">JOYFY</p>
+                <p class="main-text" data-i18n="joyfy.text">Instant browser games — no downloads, no installs, just pure
+                    fun.</p>
             </div>
         </a>
         <a href="MorePages/oikoworthliving.html" class="news-div2 noSelect hidden2">
@@ -91,20 +115,12 @@
                     design.</p>
             </div>
         </a>
-        <a href="https://joyfy.fun" class="news-div2 noSelect hidden2">
-            <img loading="lazy" class="latest-image" src="MoreImages/joyfy.png" alt="">
-            <div>
-                <p class="subtitle-text">JOYFY</p>
-                <p class="main-text" data-i18n="joyfy.text">Instant browser games — no downloads, no installs, just pure
-                    fun.</p>
-            </div>
-        </a>
+        <div class="section-divider"></div>
         <p class="title-text2" id="services" data-i18n="section.services">
             SERVICES
         </p>
-        <p class="main-text" style="text-align: center; margin-top: 30px; margin-bottom: 15px;"
-            data-i18n="services.intro">COMPUTER ENGINEERING
-            EXPERTISE AND SERVICES:</p>
+        <span class="title-accent"></span>
+        <p class="main-text services-intro" data-i18n="services.intro">SOFTWARE & WEB ENGINEERING:</p>
         <div class="expertise-div noSelect hidden2">
             <div class="expertise-header">
                 <p class="subtitle-text" data-i18n="web.title">WEBSITE DESIGN & DEVELOPMENT</p>
@@ -154,6 +170,14 @@
                 </p>
             </div>
         </div>
+        <div class="section-divider"></div>
+        <p class="title-text2" id="local-services" data-i18n="section.local">
+            LOCAL TECH SERVICES
+        </p>
+        <span class="title-accent"></span>
+        <p class="main-text services-intro" data-i18n="local.intro">
+            In-person hardware support, available locally on request:
+        </p>
         <div class="expertise-div noSelect hidden2 repair-bg">
             <div class="expertise-header">
                 <p class="subtitle-text" data-i18n="repair.title">DEVICE REPAIR, DIAGNOSTICS & UPGRADES</p>
@@ -175,39 +199,32 @@
                 </ul>
             </div>
         </div>
-        <div id="cv" class="icon-container noSelect" style="height: auto; padding-top: 60px; padding-bottom: 60px; padding-left: 15px; padding-right: 15px;">
-            <div style="width: 90%; text-align: center;">
-                <p class="title-text" style="text-align: center; margin-bottom: 15px; margin-top: 0px;"
-                    data-i18n="cv.title">CURRICULUM VITAE
-                </p>
-                <p class="subtitle-text hidden" style="text-align: center; margin-top: 0px;" data-i18n="cv.revised">
-                    REVISED: 2/2025</p>
-                <a href="CV_LazarosBourantas_EN.pdf" download style="text-decoration: none;">
-                    <button class="cv-button" style="cursor: pointer;" data-i18n="cv.button">
+        <div id="cv" class="icon-container cv-section noSelect">
+            <div class="cv-inner">
+                <p class="title-text" data-i18n="cv.title">CURRICULUM VITAE</p>
+                <p class="subtitle-text hidden" style="text-align: center;" data-i18n="cv.revised">REVISED: 2/2025</p>
+                <a href="CV_LazarosBourantas_EN.pdf" download>
+                    <button class="cv-button" data-i18n="cv.button">
                         DOWNLOAD C.V.
                     </button>
                 </a>
             </div>
         </div>
-        <div class="icon-container"
-            style="border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; margin-bottom: 0px; height: auto; padding-top: 60px; padding-bottom: 60px;">
-            <p class="title-text" style="text-align: center; margin-bottom: 15px; margin-top: 0px;"
-                data-i18n="newsletter.title">NEWSLETTER</p>
+        <div class="icon-container newsletter-section">
+            <p class="title-text" data-i18n="newsletter.title">NEWSLETTER</p>
             <p class="main-text" style="text-align: center;" data-i18n="newsletter.text">
                 Stay updated with my latest projects, releases, and announcements.
             </p>
-            <form action="subscribe.php" method="POST"
-                style="display:flex; flex-direction:column; align-items:center; gap:10px; width:100%;">
+            <form action="subscribe.php" method="POST" class="newsletter-form">
                 <input type="email" name="email" required placeholder="Enter your email"
                     data-i18n-placeholder="newsletter.placeholder"
-                    style="width: 70%; max-width: 400px; padding: 12px; border-radius: 6px; border:none;">
+                    class="newsletter-input">
                 <button type="submit" class="cv-button" data-i18n="newsletter.button">
                     SUBSCRIBE
                 </button>
             </form>
         </div>
-        <div class="icon-container" id="contact"
-            style="border-top-right-radius: 0px; border-top-left-radius:0px; margin-top: 0px;">
+        <div class="icon-container contact-section" id="contact">
             <div class="icon-div" title="lazarosbourantas9@gmail.com"
                 onclick="copyToClipboard(event, 'lazarosbourantas9@gmail.com')">
                 <p class="subtitle-text" style="margin: 0px; text-align: center; padding: 0px;"
@@ -232,40 +249,62 @@
             </div>
         </div>
     </div>
-    <footer class="bottom-header"
-        style="box-sizing: border-box; height: auto; padding: 60px 20px 30px; text-align: center; gap: 25px;">
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-            <a class="noSelect" href="/index.html"
-                style="cursor: pointer; height: 90px; opacity: 0.6; transition: all 0.3s ease;"
-                onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';"
-                onmouseout="this.style.opacity='0.6'; this.style.transform='scale(1)';">
-                <img style="height: 100%; object-fit: contain;" src="icons/lm.webp" alt="Lazaros Bourantas Logo">
-            </a>
+    <footer class="bottom-header">
+        <div class="footer-container">
+            <!-- Column 1: Logo & Tagline -->
+            <div class="footer-column logo-column">
+                <a href="/index.html" class="footer-logo noSelect">
+                    <img src="icons/lm.webp" alt="Lazaros Bourantas Logo">
+                </a>
+                <p class="footer-tagline" data-i18n="footer.tagline">Designing, developing, and engineering premium digital experiences.</p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-column">
+                <h4 data-i18n="footer.about">Quick Links</h4>
+                <ul>
+                    <li><a href="#latest" data-i18n="nav.latest">LATEST</a></li>
+                    <li><a href="#services" data-i18n="nav.services">SERVICES</a></li>
+                    <li><a href="#cv" data-i18n="nav.cv">C.V.</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div class="footer-column">
+                <h4 data-i18n="nav.services">Services</h4>
+                <ul>
+                    <li><a href="#services" data-i18n="web.title">Website Design</a></li>
+                    <li><a href="#services" data-i18n="software.title">Software Solutions</a></li>
+                    <li><a href="#local-services" data-i18n="repair.title">Tech Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer-column">
+                <h4 data-i18n="footer.contact">Contact</h4>
+                <ul class="contact-links">
+                    <li><a href="mailto:lazarosbourantas9@gmail.com">lazarosbourantas9@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/lazarosbourantas/" target="_blank">
+                        <img src="icons/linlogo.svg" alt="" class="nav-icon" style="height: 14px; width: 14px;"> LinkedIn
+                    </a></li>
+                    <li><a href="https://www.instagram.com/lazarosbourantas/" target="_blank">
+                        <img src="icons/iglogo.svg" alt="" class="nav-icon" style="height: 14px; width: 14px;"> Instagram
+                    </a></li>
+                </ul>
+            </div>
         </div>
 
-        <div style="display: flex; justify-content: center; gap: 40px; margin-top: 90px; flex-wrap: wrap;">
-            <a class="promo-text" href="#contact"
-                style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
-                onmouseover="this.style.color='var(--white)';" onmouseout="this.style.color='var(--secondary-color2)';"
-                data-i18n="footer.contact">Contact</a>
-            <a class="promo-text" href="privacy.html"
-                style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
-                onmouseover="this.style.color='var(--white)';" onmouseout="this.style.color='var(--secondary-color2)';"
-                data-i18n="footer.privacy">Privacy Policy</a>
-            <a class="promo-text" href="termsofservice.html"
-                style="margin: 0; font-size: clamp(14px, 1.2vw, 16px); transition: color 0.3s ease; text-decoration: none;"
-                onmouseover="this.style.color='var(--white)';" onmouseout="this.style.color='var(--secondary-color2)';"
-                data-i18n="footer.terms">Terms of Service</a>
+        <div class="footer-bottom">
+            <div class="footer-divider"></div>
+            <div class="footer-legal">
+                <p class="copyright" data-i18n="footer.copyright">© 2024 LAZAROS BOURANTAS. ALL RIGHTS RESERVED.</p>
+                <div class="legal-links">
+                    <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="termsofservice.html" data-i18n="footer.terms">Terms of Service</a>
+                </div>
+            </div>
         </div>
-
-        <div
-            style="width: 60%; height: 1px; background: linear-gradient(to right, transparent, var(--secondary-color), transparent); margin: 15px auto 10px;">
-        </div>
-
-        <p class="promo-text" style="font-size: clamp(9px, 0.9vw, 14px); opacity: 0.6; letter-spacing: 1px;"
-            data-i18n="footer.copyright">© 2024
-            LAZAROS BOURANTAS. ALL
-            RIGHTS RESERVED.</p>
     </footer>
 
     <!-- Custom Cursor -->
